@@ -1,0 +1,89 @@
+=> Editions In Java :-
+-> There are 3 editions in java :-
+    1. J2SE (Java 2 Standard Edition) - Core Java
+    2. J2EE (Java 2 Enterprise Edition) - Advance Java
+    3. J2ME (Java 2 Micro Edition) - Mobiles, Embedded System (remotes, ATM's, TV, Washing Machines etc)
+
+=> Types of applications in java :-
+
+-> We can create 2 types of applications in java :-
+    1. Standalone Applications
+        = These are the applications which are executed only on single system.
+        = These applications can be developed using J2SE.
+        = These applications does not follows the client-server architecture.
+        = There are 2 types of standalone applications :-
+            a. CUI (Character User Interface) Applications.
+                - Console Based App or Command Line User Interface or Text-Based App.
+            b. GUI (Graphical User Interface) Applications.
+
+    2. Enterprise Applications
+        a. Web Applications
+        b. Distributed Applications
+
+=> What is Enterprise ?
+-> "Enterprise" term is used for large scale companies which has multiple departments, levels, divisions or groups.
+-> For eg :-
+    = TATA Group : Consumer and retail, Hotels, IT, Automobiles, Steel, Power etc.
+    = Mahindra Group : IT, Automobiles, Defence, Education, Financial Services etc.
+    etc
+
+=> What is enterprise applications ?
+-> "Enterprise Applications" are large-scale, distributed, transaction and highly available applications which are designed to support the enterprise business requirements
+-> To develop enterprise applications we have to use a lot of technologies, multiple design patterns, system architectures.
+
+=> Web Applications :-
+-> Client : Browser
+-> Server : Web Server or Application Server
+-> Technologies Used : Servlet, JSP, Spring MVC, JSF, Play Framework, Struts etc
+-> Architecture :-
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+=> Distributed Applications :-
+-> Client : Browser, Desktop Application, Mobile Application, IoT Device etc.
+-> Server : Application Server
+-> Technologies Used : EJB (Enterprise Java Beans), Spring framework, JPA (Java Persistence API), 
+    Hibernate, JTA (Java Transaction API), JMS (Java Message Service) etc.
+
+-> Architecture :-
+
+=> Difference between Web Server and Application Server :-
+
+->  Web Server is lightweight.
+    Application Server is heavy weight.
+
+->  Web server contains only web containers (servlet container, JSP container etc).
+    Application server contains web container + EJB container.
+
+->  Web server is good for static contents like html pages.
+    Application server is good for dynamic contents.
+
+->  Web server consumes less resources i.e. CPU, memory etc.
+    Application server use more resources.
+
+->  Web server examples are : Apache Tomcat, Resin etc.
+    Application server examples are : Weblogic, JBoss, Websphere etc.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+=> What is framework ?
+-> Frameworks are the pre-written code acting as a template which can be used or customized by the developers.
+-> In simple terms we can say that frameworks are the collections of API's and tools which can be used to develop projects.
+-> For example : Spring, Struts, Hibernate, Angular, React etc.
+
+=> Advantages of frameworks :-
+-> Fast development speed.
+-> Less code (because it removes the boilerplate code).
+-> Support API integration.
+-> Customizable (open source).
+-> Easy to debug.
+-> Good documentation support.
+etc
+
+=> Types of frameworks :-
+-> There are 2 types of frameworks :-
+    1. Web Framework
+        = eg. Struts, JSF etc
+    2. Application Framework
+        = eg. Spring etc
