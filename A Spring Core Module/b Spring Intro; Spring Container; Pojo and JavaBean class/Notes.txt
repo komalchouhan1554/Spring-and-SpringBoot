@@ -1,0 +1,201 @@
+=> What is Spring ?
+     -> Spring is an "Open Source Application Framework" which is used to develop any type of application
+     	i.e. Standalone Application or Enterprise Application.
+     -> Spring framework was written by Rod Johnson.
+     -> Spring framework was released under Apache 1.0 licence.
+     -> Spring framework was released in June 2003.
+     -> First production version i.e. 1.0 version was released in March 2004.
+     -> Latest version is 6.x version.
+
+
+=> Advantages of Spring Framework :-
+
+     1. Dependency Injection :- The process of injecting or inserting dependent object is known as Dependency Injection.
+                    OR Injecting properties on references of other object in an object is called as Dependency Injection.
+     2. High Level Abstraction and Simplified Development.
+     3. Enhanced Integration & Ecosystem.
+     4. AOP (Aspect Oriented Programming).
+     5. Easy to test the application.
+     6. Scalability and maintainability.
+          etc
+
+=> What is Spring Container :-
+     -> Spring container is the "Heart" or "Core Component" of spring framework.
+     -> It is same like :-
+          = JVM which is used to execute java programs.
+          = Servlet Container or JSP Container which is used to execute Servlet and JSP pages.
+          = EJB Container which provides runtime environment for enterprise beans.
+
+
+     -> Responsibilities of Spring Container :-
+          1. Bean Creation and Initialization : Spring Container is responsible to create and initialize the beans (objects) defined 
+               in the Spring configuration.
+
+          2. Bean Configuration Handling :Spring Container is responsible to loads the configuration from XML, annotations or 
+               Java-based configuration files.
+
+          3. Bean Lifecycle Management : Spring Container is responsible to handle the complete bean lifecycle, including 
+               initialization (@PostConstruct) and destruction (@PreDestroy).
+
+          4. Beans Scope Management : Spring Container supports different bean scopes (e.g., singleton, prototype) to control the 
+               lifecycle and usage of beans.
+
+          5. Dependency Injection (DI) : Spring Container injects the dependencies between objects, ensuring loose coupling.
+
+          6. AOP (Aspect-Oriented Programming) Support : Spring Container allows cross-cutting concerns like logging and security 
+               to be modularized through aspects.
+               
+          7. Integration with Other Technologies : Spring Container supports integration with databases, messaging services and web frameworks.
+
+          8. Internationalization (I18N) Support : Spring Container supports Internationalization (i18n), enabling applications to present 
+               messages, formats, and resources in multiple languages, making it adaptable for users across different regions.
+               
+          9. Environment Management : Spring Container provides support for property sources and profiles for environment-specific configurations.
+
+          10. Bean Post-Processing : Spring Container allows the use of BeanPostProcessor to modify bean instances before and after initialization.
+
+    
+     -> Types of Spring Container :-
+          1. BeanFactory (old)
+          2. ApplicationContext (new)
+     -> Working of Spring Container :-
+
+
+=> What do you mean by configurations in spring ?
+     -> Configurations refers to the settings or instructions provided to the spring framework (spring
+          container) to define and manage various aspects of an application.
+
+     -> There are a lot configurations in spring :-
+          1. Bean definitions
+          2. Dependency injection
+          3. Bean life-cycle
+          4. Bean autowiring
+          5. Bean post-processing
+          6. Component scanning
+          7. Database configurations
+          8. AOP
+          9. View resolvers
+          10. Security configurations
+          11. Property files
+               etc
+
+     -> In spring, we can provide configurations by :-
+          1. XML files
+          2. Java classes
+          3. Annotations
+          4. Property files
+          5. Environment variables
+          6. Command-line arguments
+          7. Profiles
+               etc
+
+
+=> Configuration Metadata File:-
+
+     -> It is also known as Spring configuration file which contain the configuration metadata for our spring application.
+     -> It serves as an central repository to configure beans, dependencies, scopes and other application-specific setting.
+
+     -> Note: If configuration metadata file is an XML file then name should be applicationContext.Xml
+
+=> Bean Objects:-
+
+     -> Bean objects are the object of JavaBean/pojo class created and maintained by Spring container.
+     -> There objects are not created by user manually.
+     -> It's his life cycle, which is maintained by spring container.
+     -> It has its own configuration.
+     -> Bean are the objects that form the backbone of our spring application which is managed by Spring container.
+     -> Beans are created with the configuration details metadata that we provide to spring container using spring configuration file that is XML file or Java file
+
+     -> There are some important attributes in bean objects:-
+          1. Class 
+          2. ID or name 
+          3. Property values 
+          4. Constructors arguments 
+          5. Scope 
+          6. Lazy initialization 
+          7. Autowiring 
+          8. Profile 
+          9. Initialization and destruction callbacks 
+          10. Bean postprocessors
+
+
+=> What is POJO class :-
+     -> POJO stands for "Plain Old Java Object"
+     -> It is simple java class which follows some basic conventions for encapsulation, modularity and maintability.
+     -> Syntax :-
+          public class Student
+          {
+               String name;
+               public int rollno;
+               private int marks;
+
+               //getter and setter methods
+          }
+
+
+=> What is JavaBean class :-
+     -> JavaBean class is the class which encapsulates many objects/properties into single unit.
+     -> JavaBean class is a special type of POJO class which follows the following conventions :-
+          1. Class must be public.
+          2. It must inherit "Serializable" interface.
+          3. It must contain public no-argument constructor.
+          4. All the properties must be private.
+          5. It should have public getter and setter methods.
+
+     -> Syntax :-
+          public class Student implements Serializable
+          {
+               public Student(){}
+
+               private String name;
+               private int rollno;
+               private int marks;
+
+               //public getter and setter methods
+          }
+
+-> NOTE : All JavaBean classes are POJO classes but all POJO classes are not JavaBean classes
+
+
+=> What is difference between POJO class and JavaBean class :-
+     1. POJO class is the class which does not have any restriction
+        JavaBean class is the POJO class having some restrictions
+
+     2. POJO class may/may not inherit Serializable interface
+        JavaBean class must inherit Serializable interface
+
+     3. POJO class may/may not contain no-argument constructor
+        JavaBean class must have public no-argument constructor
+
+     4. In POJO class, fields or properties can have any visibility i.e. private, public, default
+        In JavaBean class, fields or properties must be private
+
+     5. In POJO classes, fields or properties can be accessed by their names
+        In JavaBean classes, fields or properties can be accessed only by getter and setter methods
+
+     6. POJO class does not have control on members
+        JavaBean class have full control on members
+
+     7. We cannot use annotations in POJO classes
+        We can use annotations in JavaBean classes
+
+     8. We cannot provide ay business logic in POJO classes
+        We can provide business logic in JavaBean classes
+
+
+=> Steps to create Spring First Program :-
+
+     1. Download and install JDK (JDK 8, 11, 17) and any one IDE (Eclipse)
+     2. Download spring jar files :-
+          = spring-bean-xxx.jar
+          = spring-core-xxx.jar
+          = spring-context-xxx.jar
+          = commons-logging-xxx.jar
+          = spring-expression-xxx.jar
+     3. Create "Java Project" in eclipse
+     4. Add above jar files in the project (create lib)
+     5. Create POJO class or JavaBean class
+     6. Create configuration metadata file
+     7. Create Main class to execute the application
+
+================================================================================
