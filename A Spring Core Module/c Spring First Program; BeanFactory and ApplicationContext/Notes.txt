@@ -1,0 +1,37 @@
+=> Package Name :-
+ = Organisation Website : www.google.com
+ = com.google.beans
+
+ = www.YPsillon.in --> in.yps.beans
+
+
+=> What is Resource ?
+
+-> Whenever we need to load or read any external file/resource i.e. xml file, text file, properties
+    file, image etc then we use Resource.
+
+-> Resource is an pre-defined interface present in "org.springframework.core.io" package.
+
+-> Spring framework has provided some implemented classes for Resource interface :-
+
+    1. ClassPathResource
+    2. URLResource
+    3. InputStreamResource
+    4. ByteArrayResource
+    5. FileSystemResource
+    etc
+
+=> What is BeanFactory ?
+
+-> It is the core interface in the Spring Framework for managing and accessing the beans.
+-> It serves as a "Spring Container" that instantiate, configure, manage bean life cycle etc.
+
+
+=> What is ApplicationContext ?
+
+-> It is the sub-interface of BeanFactory for managing and accessing bean objects.
+-> It serves as a "Spring Container" which provides more functionalities as compared to BeanFactory.
+-> In simple terms we can say that it is an advanced spring container as compared to BeanFactory.
+
+
+=> Hierarchy of Spring Container :-
