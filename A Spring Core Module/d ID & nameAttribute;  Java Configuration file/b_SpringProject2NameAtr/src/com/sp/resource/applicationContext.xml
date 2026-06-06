@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- bean definitions using name -->
+    
+    <!-- Different ways -->
+    
+    <!-- Using coma(,) -->
+    <bean class = "com.sp.beans.Student" name = "stdObj1, stdObj2">
+    
+    	<property name="name" value = "Prafull Jadhav"></property>
+    	<property name="rollNo" value = "201"></property>
+    </bean>
+    
+    <!-- Using semicolon(;) -->
+    <bean class = "com.sp.beans.Student" name = "stdObj3; stdObj4">
+    
+    	<property name="name" value = "Komal Chauhan"></property>
+    	<property name="rollNo" value = "201"></property>
+    </bean>
+    
+    <!-- Using Space -->
+    <bean class = "com.sp.beans.Student" name = "stdObj5 stdObj6" id = "stdObj6">
+    
+    	<property name="name" value = "Shivam Mishra"></property>
+    	<property name="rollNo" value = "201"></property>
+    </bean>
+    
+</beans>

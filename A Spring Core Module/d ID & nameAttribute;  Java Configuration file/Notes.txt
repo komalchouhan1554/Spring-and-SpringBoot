@@ -1,0 +1,58 @@
+=> What is bean ?
+   -> Bean are the objects that form the backbone of our spring application which is managed by Spring
+   Container
+   -> Beans are created with the configuration details/metadata that we provides to spring container
+   using spring configuration file i.e. .xml file or .java file
+   -> There are some important attributes related to bean objects :-
+        1. Class
+        2. Id or Name
+        3. Property Values
+        4. Constructor Arguments
+        5. Scope
+        6. Initalization and Destruction Callbacks
+        7. Lazy Initialization
+        8. Bean Post-Processors
+        8. Autowiring
+        9. Profiles
+           etc
+
+
+=> What is id and name attributes for bean object ?
+   -> id :-
+        = It specifies the unique identity of bean object
+
+   -> name :-
+       = It specifies the unique identity of bean object but it is more flexible as compared to id attribute.
+       = Flexibilities that are provided by name attribute are :-
+            1. We can provide multiple names for one bean object.
+            2. We can separate the multiple bean names by comma(,) or semi-colon(;) or space.
+            3. We can provide same bean object name in name and id attribute.
+            4. We can provide same name to one bean object but same name cannot be provided to multiple bean objects.
+
+
+=================================================================================================================
+
+=> Java Based Configuration :-
+   -> Before Spring 3.0 version, it was compulsory to provide spring configurations metadata by using xml file. But 
+        from spring 3.0 version, its not compulsory to create xml file. We can also provide configurations metadata 
+        by using java class.
+   -> How to achieve java based configurations :-
+        1. Create java class i.e. configuration class and mark it as @Configuration annotation
+        2. Create one or more methods (which returns bean object) and mark it as @Bean annotation
+        3. Create object of AnnotationConfigApplicationContext class and access the bean object
+
+   -> NOTE : If we don't provide bean object name manually then bean name will be same as that of method
+    name. If we want to declare bean name manually then we can use @Bean(name = "beanObjectName")
+
+
+=> What is @Configuration annotation ?
+   -> @Configuration annotation is used with class
+   -> When spring container starts, it will check all the java classes marked with @Configuration. Then
+        it will load the class into memory and process them to create bean definitions/configurations.
+
+=> What is @Bean annotation ?
+   -> @Bean annotation is used with methods.
+   -> @Bean methods are responsible to create and configure bean objects.
+   -> When spring container starts, it will invokes each @Bean method and create the bean objects.
+   -> By default bean object name is same as method name but if we want to change the bean object name
+        then we can use name attribute i.e. @Bean(name = "beanObjectName").
