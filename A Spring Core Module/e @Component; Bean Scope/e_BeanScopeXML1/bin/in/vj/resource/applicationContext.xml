@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+     <!--  In case of singleton scope, bean object is created before getBean(-) method calling -->
+    <bean class = "in.vj.beans.Student" id = "stdObj"  scope = "singleton">
+    	<property name="name" value="Rakesh"></property>
+    	<property name="rollNo" value="524"></property>
+    
+    </bean>
+
+</beans>

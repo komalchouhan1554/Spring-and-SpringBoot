@@ -1,0 +1,87 @@
+=> @Component :-
+   -> It is also known as "stereotype annotation"
+   -> It is used to mark the class as a spring-managed component. The spring container is responsible
+   for creating, configuring and managing the components including their life-cycle, dependency-injection
+   etc
+   -> By default @Component scope is "singleton scope"
+
+
+=> Some examples of spring-managed components are :-
+   1. @Configuration
+   2. @Bean
+   3. @Component
+        = @Controller
+        = @Service
+        = @Repository
+   4. @Autowired
+   5. @Aspect
+      etc
+
+================================================================================
+
+
+=> Different ways to create bean objects and property configuration :-
+
+1. XML file
+     <bean class="fully qualified JavaBean class name" id="beanId">
+          <property name="property_name" value="property_value" />
+          <property name="property_name" value="property_value" />
+     </bean>
+
+2. Java class :-
+     @Configuration
+     class JavaConfigFile
+     {
+          @Bean
+          public JavaBean m1()
+          {
+               JavaBean obj = new JavaBean();
+
+               obj.setXXX(-);
+               obj.setXXX(-);
+
+               return obj;
+          }
+     }
+
+
+3. Annotations :-
+   @Component
+   public class JavaBean
+   {
+        @Value("--")
+        private String property_name;
+        --
+   }
+
+   NOTE : we have to either register the JavaBean class or scan the packages
+
+============================================================================================================
+
+=> Bean Scope :-
+   -> Bean Scope defines the visibility or accessibility of that bean in the context we use it.
+   -> We can provide bean scope by using "scope attribute" or "@Scope annotation".
+   -> There are total 7 scopes :-
+        1. "singleton" scope
+        2. "prototype" scope
+
+        3. "request" scope
+        4. "session" scope
+        5. "globalSession" scope
+        6. "application" scope
+        7. "webSocket" scope
+
+   -> NOTE : By default, beans are singleton scope
+
+
+=> "singleton" scope :-
+   -> It is the default scope of bean object
+   -> In this scope only one instance will be created for a single bean definition and that same object
+        will be shared for each request made for that bean using getBean(-) method.
+   -> Program : e_BeanScopeXML1 , e_BeanScopeXML2
+
+
+=> "prototype" scope :-
+   -> In this scope a new instance is created for a single bean definition and the new object will be 
+        shared for each request made for that bean using getBean(-) method.
+   -> Program : f_BeanScopeJavaConfig1, f_BeanScopeJavaConfig1
