@@ -1,0 +1,49 @@
+=> Bean Life Cycle :-
+   1. Loading Bean Definitions
+   2. Bean Instantiation
+   3. Bean Initialization
+   4. Bean Usage
+   5. Bean Destruction
+
+-------------------------------------------------------------------------------------------------------
+
+1. Loading Bean Definitions :-
+   -> Bean definitions are the configurations (blueprint or settings) that defines how bean object
+    should be created. It includes the information about the class to instantiate, property
+    configurations, dependency injection and other configurations.
+   -> Bean definitions can be provided by xml file or java class or annotations.
+   -> It is the process of reading and parsing the configuration files to create bean definitions for
+    the beans that will be managed by the spring container.
+
+2. Bean Instantiation :-
+   -> In this phase, spring container will create an instance of the bean based on it bean definitions.
+   -> How bean objects are created ?
+        a. using default constructor or no-argument constructor : (a Bean Life-Cycle Instansiation1)
+        b. using static factory method : (a Bean Life-Cycle Instansiation2)
+        c. using instance factory method : (a Bean Life-Cycle Instansiation3)
+   -> In this phase, bean objects are initialized with default values based on the data types of the
+     properties in the JavaBean class.
+   -> In this phase, the container also injects the required dependencies into the bean object by any
+     following way :-
+        a. Setter method DI
+        b. Constructor DI
+
+3. Bean Initialization :-
+   -> In this phase bean object is initialized by its original values
+   -> How bean objects are initialized ?
+        a. using property tags : (b Bean Life-Cycle Initialization Way 1)
+        b. using explicit ways
+             i. using custom init() method : (b Bean Life-Cycle Initialization Way 2a)
+             ii. using afterPropertiesSet() method of InitializingBean callback interface : (b Bean Life-Cycle Initialization Way 2b)
+             iii. using @PostConstruct annotation (jar file is needed javax.annotation-api-xxx.jar) : (b Bean Life-Cycle Initialization Way 2c)
+
+4. Bean Usage :-
+   -> Once the bean is fully initialized, it is ready to be used in our application.
+   -> Beans can be retrieved from the spring container and can be used for business logic in our application.
+
+5. Bean Destruction :-
+   -> In this phase bean objects will be destroyed or deleted.
+   -> How bean objects are destroyed ?
+        i. using custom destroy() method
+        ii. using destroy() method of DisposableBean callback interface
+        iii. using @PreDestroy annotation (jar file is needed javax.annotation-api-xxx.jar)
