@@ -1,0 +1,47 @@
+
+=> Aware Interfaces :-
+   -> Aware interfaces are the set of interfaces which provides a way for beans to aware (or interact)
+      with their environment and obtain important resources during the application context startup.
+   -> Some commonly aware interfaces used are :-
+        1. BeanNameAware
+        2. BeanFactoryAware
+        3. ApplicationContextAware
+           etc
+   -> NOTE : We can use other approaches in place of aware interfaces.
+
+----------------------------------------------------------------------------------------------------
+
+1. BeanNameAware :-
+   -> It is used to make the bean aware of its assigned name in the spring container.
+   -> This can be useful in various scenarios where the bean needs to know its identifier or interact
+     with other beans based on its name.
+   -> It is a pre-defined interface having method i.e.
+        = setBeanName(String beanName)
+
+
+2. BeanFactoryAware :-
+   -> It is used to aware the bean for BeanFactory. It provides the bean with a reference to the
+   BeanFactory, which is useful in certain scenarios when the bean needs to access the other beans or
+   when it requires dynamic instantiation of other bean.
+   -> It is a pre-defined interface having method i.e.
+        = setBeanFactory(BeanFactory beanFactory)
+
+3. ApplicationContextAware :-
+   -> It is used to aware the bean for ApplicationContext. It is same as BeanFactoryAware but provides a
+    lot of extra features i.e. internationalization, event propagation, resource loading etc.
+   -> It is a pre-defined interface having method i.e.
+        = setApplicationContext(ApplicationContext applicationContext)
+
+
+==============================================================================================
+
+=> BeanPostProcessor :-
+   -> It allows us to customize the bean instantiation and initialization process.
+   -> In simple words we can say that it allows us to perform custom processing on beans as they are
+   being constructed and initialized by the spring container
+   -> It is a pre-defined interface having methods i.e.
+        = postProcessBeforeInitialization(Object beanObj, String beanName)
+        = postProcessAfterInitialization(Object beanObj, String beanName)
+
+
+==============================================================================================
