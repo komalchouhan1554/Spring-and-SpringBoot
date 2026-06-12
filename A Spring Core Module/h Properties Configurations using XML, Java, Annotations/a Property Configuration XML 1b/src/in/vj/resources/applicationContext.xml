@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class= "in.vj.beans.Student" id = "stdId">
+    	<property name="name" value="Vishal" />
+    	<property name="roll" value="201" />
+    	
+    	<property name="subMarks">
+    		<map>
+    			<entry key ="OSA" value = "87" />
+    			<entry key ="Java" value = "96" />
+    			<entry key ="DBMS" value = "84" />
+    			<entry key ="Maths" value = "89" />
+    			<entry key ="CN" value = "74" />
+    		</map>
+    	</property>
+    
+    </bean>
+
+</beans>

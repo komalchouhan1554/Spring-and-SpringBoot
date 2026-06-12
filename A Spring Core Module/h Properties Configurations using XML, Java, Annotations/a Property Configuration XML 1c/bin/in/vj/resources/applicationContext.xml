@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class = "org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" > 
+    	<property name="Location" value = "/in/vj/resources/student.properties"></property>
+    </bean>
+    
+    
+    <bean class= "in.vj.beans.Student" id = "stdId">
+    	<property name="name" value="${student.name}" />
+    	<property name="roll" value="${student.roll}" />
+    	
+    	<property name="subMarks">
+    		<map>
+    			<entry key ="OSA" value = "${student.subMarks.osa}" />
+    			<entry key ="Java" value = "${student.subMarks.Java}" />
+    			<entry key ="DBMS" value = "${student.subMarks.DBMS}" />
+    			<entry key ="Maths" value = "${student.subMarks.Maths}" />
+    			<entry key ="CN" value = "${student.subMarks.CN}" />
+    		</map>
+    	</property>
+    
+    </bean>
+
+</beans>
