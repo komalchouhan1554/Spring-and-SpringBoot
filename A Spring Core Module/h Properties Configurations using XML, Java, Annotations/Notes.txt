@@ -1,0 +1,24 @@
+=> Property Configurations :-
+   -> Property Configurations is the process by which we set the values in the bean properties.
+   -> We can set the property values either from xml file or java or properties file.
+
+   -> We can provide the property configuration in xml file in 2 ways:-
+	1. By using <property> tag
+	2. By using <constructor-args>
+
+
+=> Spring Configurations :-
+   -> It is the process of providing the spring application configurations that how our spring
+   application will work.
+
+
+=> What is properties file ?
+   -> A property file is a simple text file commonly used to store configurations data in key-value pair.
+   
+   -> Advantage of properties file :-
+        1. Easy to update or modify the configurations.
+        2. We don't need to restart the application if we change or modify the configurations.
+        3. Easy to test the application.
+           etc
+
+==============================================================================================================
