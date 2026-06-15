@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class= "in.vj.beans.Teacher" id = "tId">
+    	<constructor-arg ref="stdId" />
+    </bean>
+    
+    <bean class= "in.vj.beans.Student" id = "stdId">
+    	<constructor-arg ref="tId" />
+    </bean>
+
+</beans>

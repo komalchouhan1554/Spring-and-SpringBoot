@@ -1,0 +1,53 @@
+=> Inversion Of Control (IoC) :-
+   -> Inversion of Control is a design pattern/principal that focus on inverting the control flow of an application.
+   -> It shifts the responsibility of managing the flow of execution and the lifecycle of objects from
+        application itself to external entity i.e. framework or container.
+   -> It identifies the client required dependencies or services and then it will create and inject the
+        required dependencies or service to the application without client request.
+   -> Spring Container works on the basis of IoC principal and thus it is also known as IoC Container.
+   
+   -> Advantages of IoC principal :-
+        1. Classes are loosely coupled
+        2. Modularity can be achieved
+        3. Easier to test and maintain the application
+           etc
+
+   -> In spring IoC principal can be achieved by following :-
+        1. Dependency Injection (DI)
+        2. Service Locator
+        3. Contextualized Lookup
+        4. Template Method Design Pattern
+        5. Event Based IoC
+           etc
+   -> NOTE : From above, only DI is most commonly IoC principal used in spring.
+
+=======================================================================================================
+
+=> Dependency Injection (DI) :-
+   -> Dependency Injection is a design pattern that is used to implement IoC principal.
+   -> Dependency Injection main functionality is to "inject" one object into another object.
+   -> How to achieve DI in Spring Configuration File (xml) :-
+        = We can achieve DI by 2 ways :-
+             1. Setter Method DI
+             2. Constructor DI
+
+=====================================================================================================
+
+=> What is difference between Setter Method DI and Constructor DI :-
+   1. How dependency is injected :-
+        = Setter Method DI uses setter methods i.e. setXXX() method to inject the dependency.
+        = Constructor DI uses constructor to inject the dependency.
+
+   2. Readability :-
+        = Setter Method DI has more readability because we have to provide the property name and its value.
+        = Constructor DI has less readability because we don't provide the property name with value.
+
+   3. Partial Dependency :-
+        = Partial Dependency is possible in case of Setter Method DI.
+        = Partial Dependency is not possible in case of Constructor DI.
+
+   4. Circular DI :-
+        = We can achieve Circular DI using Setter Method DI.
+        = We cannot achieve Circular DI using Constructor DI.
+
+=======================================================================================================
