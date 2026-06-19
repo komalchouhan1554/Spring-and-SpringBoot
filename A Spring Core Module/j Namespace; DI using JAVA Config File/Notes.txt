@@ -1,0 +1,42 @@
+=> p-namespace :-
+   -> When we have to inject dependencies in bean object using setter method then we have to provide
+   <property> tag. More dependencies more <property> tag and due to this the code become lengthy which
+   is not good.
+
+   -> To solve this problem, spring has provided one feature or shortcut i.e. p-namespace.
+
+   -> How to use p-namespace :-
+        1. Provide p-namespace declaration in spring configuration file
+           xmlns:p="http://www.springframework.org/schema/p"
+        2. Then we can provide the dependencies in bean tag by 
+            p:property_name="value" 
+                    OR
+            p:property_name-ref="value"
+
+
+=> c-namespace :-
+   -> When we have to inject dependencies in bean object using constructor then we have to provide
+   <constructor-arg> tag. More dependencies more <constructor-arg> tags and due to this the code becomes
+   lengthy which is not good.
+
+   -> To solve this problem, spring has provided one feature or shortcut i.e. c-namespace.
+
+   -> How to use c-namespace :-
+        1. Provide c-namespace declaration in spring configuration file
+        2. Then we can provide the dependencies in bean tag by
+            c:property_name="value" 
+                    OR
+            c:_indexPosition="value" 
+                    OR 
+            c:property_name-ref="value"
+
+===========================================================================================================================
+
+=> Dependency Injection using Java Configuration File :-
+   -> How to achieve DI in Spring Configuration File (java) :-
+        = We can achieve DI by 2 ways :-
+             1. Setter Method DI
+             2. Constructor DI
+   -> Programs:
+     -> c DI using Settter Java Config File
+     -> d DI using Consturctor Java Config File

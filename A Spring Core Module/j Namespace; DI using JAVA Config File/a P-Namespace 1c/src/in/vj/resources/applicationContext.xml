@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	
+	
+	xmlns:p= "http://www.springframework.org/schema/p"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	   <!--  bean definitions here  -->
+		<!--  
+		<bean class="in.vj.beans.Student" id="stdId">
+		
+			<property name="name" value="Vishal"/>
+			<property name="roll" value="654"/>
+			<property name="marks" value="96.8"/>
+		</bean>
+		-->
+		
+		<bean class = "in.vj.beans.Address" id = "addId"
+		
+		 p:houseno = "111"
+		 p:city = "Indore"
+		 p:pincode = "452079" />
+		
+		<bean class = "in.vj.beans.Student" id = "stdId"
+		
+		 p:name = "Vishal"
+		 p:roll = "568"
+		 p:marks = "97.8" 
+		 p:address-ref = "addId"/>
+		
+</beans>
