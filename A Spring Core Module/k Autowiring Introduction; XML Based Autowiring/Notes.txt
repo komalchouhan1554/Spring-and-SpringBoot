@@ -1,0 +1,57 @@
+=> Dependency Injection (DI) :-
+   -> DI is the process by which we can inject one bean object into another bean object.
+
+   -> DI can be achieved by 2 ways :-
+        1. Setter Method DI
+        2. Constructor DI
+        (NOTE : both these have been done by using xml and java based configuration)
+
+   -> Till now we have achieved DI by explicit ways.
+
+
+=> Autowiring :-
+   -> Autowiring is the feature of Spring Framework by which we can achieve DI automatically.
+
+   -> Advantage :-
+        = It requires less code
+   -> Disadvantage :-
+        = There is no control of programmer
+        = It can be achieved only on non-primitive or user-defined data types (excluding String), not on
+            primitive data types.
+
+   -> How can we achieve autowiring :-
+        = We can achieve autowiring by 4 ways :-
+             1. XML Based Autowiring
+             2. Java + Annotation Based Autowiring
+             3. Component Scanning
+
+================================================================================================================
+
+=> XML Based Autowiring :-
+   -> In case of XML Based Autowiring, we don't need to use "ref" attribute in <property> or
+     <constructor-arg> tag
+
+   -> We can achieve XML based autowiring by using "autowire" attribute in <bean> tag i.e.
+      <bean class="----" id="----" autowire="--modes--">
+
+   -> Modes of autowire attribute :-
+        1. no :-
+             = It is default autowiring mode
+             = It simply means that we don't want to achieve autowiring
+        2. byName
+             = In this case we will achieve autowiring by matching "property name" of bean object and
+             "bean id" in spring configuration file
+             = It uses "Setter Method DI" internally
+        3. byType
+             = In this case we will achieve autowiring by matching the data-types i.e. "data-types" in
+             bean class should be same as that of "class" in <bean> tag
+             = It uses "Setter Method DI" internally
+             = In this case, if we have create multiple bean objects of one class, then which class it
+             will inject, confusion will occur. To remove this confusion we can we one attribute i.e.
+             "autowire-candidate" i.e. autowire-candidate="false". Whenever we will use this attribute
+             with the bean, it will not participate in autowiring
+        4. constructor
+             = This is same as that of byType
+             = It internally use "Constructor DI"
+        5. autodeduct
+             = It is deprecated from spring 3.x version
