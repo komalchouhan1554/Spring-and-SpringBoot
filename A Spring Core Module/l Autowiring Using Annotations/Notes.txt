@@ -1,0 +1,8 @@
+=> Java + Annotation Based Autowiring :-
+   -> In this case we have to use @Autowired annotation.
+   -> @Autowired annotation can be used with field (property), setter method or constructor.
+
+   -> If there are 2 bean objects which are ready to be injected in the bean then there will be
+      confusion. To remove this confusion we can use one annotation i.e. @Qualifier.
+
+   -> Note : We can use @Autowired annotation in case of XML spring configuration file
