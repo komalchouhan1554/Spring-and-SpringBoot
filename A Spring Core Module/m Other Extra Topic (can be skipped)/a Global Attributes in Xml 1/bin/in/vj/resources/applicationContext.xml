@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    					http://www.springframework.org/schema/beans/spring-beans.xsd"
+    					
+    default-init-method="xyz"
+    default-autowire="byName">
+
+    <!-- bean definitions here -->
+
+	<bean class = "in.vj.beans.Student" id = "stdId1" >
+		<property name="name" value = "Vishal" />
+	</bean>
+	
+	<bean class = "in.vj.beans.Student" id = "stdId2" >
+		<property name="name" value = "Vishal" />
+	</bean>
+	
+	<bean class = "in.vj.beans.Student" id = "stdId3" >
+		<property name="name" value = "Vishal" />
+	</bean>
+</beans>
