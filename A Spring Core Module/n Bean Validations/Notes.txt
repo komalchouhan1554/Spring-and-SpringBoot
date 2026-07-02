@@ -1,0 +1,41 @@
+=> Bean Validations :-
+   -> Bean validation is the way by which we can check the proper data in the bean object
+   -> We can achieve bean validations by multiple ways which are as follows :-
+        1. Using "Validator" interface
+        2. Using JSR-303 Bean Validation
+        3. Using "@Valid" and "@Validate" annotations
+        4. Using annotations of SpEL (Spring Expression Language)
+           etc
+
+================================================================================
+
+=> "Validator" interface :-
+   -> Syntax :-
+        interface Validator
+        {
+             public boolean supports(Class clazz)
+
+             public void validate(Object obj, Errors errors)
+        }
+
+=========================================================================================================
+
+=> DataBinder :-
+   -> It is a class in sprnig used for data binding
+   -> It is responsible for binding the data from HTTP request parameters to java objects
+
+   -> NOTE :
+        = It is not responsible for validation itself, but it can be configured with validators to
+        perform validation on the bound data
+        = The validation results are stored in a separate object of the type "BindingResult" which can be
+        accessed after the data bind process
+
+===========================================================================================================
+
+=> BindingResult :-
+   -> It is an interface that represents the result of data binding and validations
+   -> Implemented class of BindingResult interface are :-
+        1. MapBindingResult
+        2. BeanPropertyBindingResult
+
+===========================================================================================================
