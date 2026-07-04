@@ -1,0 +1,89 @@
+=> Logging :-
+   -> Logging is the process of tracking or recording important information, events, messages or issues
+      that occur during the execution of our application.
+   -> The log files generated during logging process will help the developers or system administrators
+      to monitor the application behaviour, diagous issues and track the errors
+
+   -> Use of logging :-
+        1. Error Tracking and Debugging :-
+             = In web applications we can track the errors like error generated during form submission
+        2. Security Monitering :-
+             = We can track security-related events such as failed to login attempts or unautorized acces
+               attempts.
+        3. Auditing & Compliance :-
+             = A financial application might log all the financial transactions including the details of
+            transaction, its time, location etc.
+        4. Performace Analysis :-
+             = We can track the time taken by our application to perform any event or respond
+        5. System Health Monitoring :-
+             = In server enviornment we can track the memory usage, CPU load and other metrics
+        6. Deployment & Release Management :-
+             = We can track the version number, time of releasing the application etc
+        etc
+
+   -> Where we can use logging :-
+        1. Software Development
+             = Web Development
+             = Mobile App Development
+        2. DevOps & Infrastructure :-
+             = Server Applications
+             = Databases
+        3. Networking & Security :-
+             = Firewall & Security Appliances
+             = Network Servers
+        4. Cloud Computing :-
+             = Cloud Servers
+             = Serverless Computing
+        5. Industrial Automation & IoT :-
+             = Industrial Control Systems
+             = IoT Devices
+        etc
+
+
+-> Logging process is supported by many languages i.e. java, python, php, JavaScript, Node JS etc
+
+   -> There are a lot of API's & Frameworks for logging :-
+        1. Java Logging API
+        2. Log4j
+        3. Logback
+        4. Tinylog
+
+        5. SLF4j
+        6. JCL (Jakarta Commons Logging) - old name was Apache Commons Logging
+           (5th and 6th are logging wrappers)
+
+================================================================================
+
+1. Java Logging API :-
+   -> Java Logging API was introduced in JDK 1.4 version
+   -> It is pre-defined in JDK so no need to download any jar file or provide dependency
+   -> This API is present in "java.util.logging" package
+   -> Components of logging :-
+        = There are 2 components in logging :-
+             i. Logger
+             ii. Handler
+
+--------------------------------------------------
+
+i. Logger :-
+   -> Logger is an object in logging framework that you use to emit the log messages
+   -> Some levels of Logger are :-
+        1. SEVERE (highest value)
+        2. WARNING
+        3. INFO
+        4. CONFIG
+        5. FINE
+        6. FINER
+        7. FINEST (lowest value)
+
+ii. Handler :-
+   -> Handler is also an object that listens the messages at or above a specified minimum security level
+   -> Handler will take the messages and post it to the provided medium like console or file or database
+   -> There are 5 handlers :-
+        1. ConsoleHandler
+        2. FileHandler
+        3. StreamHandler
+        4. SocketHandler
+        5. MemoryHandler
+
+================================================================================

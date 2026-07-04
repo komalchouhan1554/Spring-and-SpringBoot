@@ -1,0 +1,40 @@
+Mar 31, 2026 2:07:36 PM in.vj.calc.Calculator2 main
+INFO: =========================================
+Mar 31, 2026 2:07:40 PM in.vj.calc.Calculator2 main
+INFO: User has provided no1 i.e. 45
+Mar 31, 2026 2:07:42 PM in.vj.calc.Calculator2 main
+INFO: User has provided no2 i.e. 2
+Mar 31, 2026 2:07:44 PM in.vj.calc.Calculator2 main
+INFO: User has provided symbol i.e. *
+Mar 31, 2026 2:07:44 PM in.vj.calc.Calculator2 main
+INFO: result is: 90
+Mar 31, 2026 2:07:47 PM in.vj.calc.Calculator2 main
+INFO: =========================================
+Mar 31, 2026 2:07:50 PM in.vj.calc.Calculator2 main
+INFO: User has provided no1 i.e. 644
+Mar 31, 2026 2:07:52 PM in.vj.calc.Calculator2 main
+INFO: User has provided no2 i.e. 500
+Mar 31, 2026 2:07:53 PM in.vj.calc.Calculator2 main
+INFO: User has provided symbol i.e. -
+Mar 31, 2026 2:07:53 PM in.vj.calc.Calculator2 main
+INFO: result is: 144
+Mar 31, 2026 2:08:44 PM in.vj.calc.Calculator2 main
+INFO: =========================================
+Mar 31, 2026 2:08:50 PM in.vj.calc.Calculator2 main
+INFO: User has provided no1 i.e. 321
+Mar 31, 2026 2:08:54 PM in.vj.calc.Calculator2 main
+INFO: User has provided no2 i.e. 6
+Mar 31, 2026 2:08:55 PM in.vj.calc.Calculator2 main
+INFO: User has provided symbol i.e. *
+Mar 31, 2026 2:08:55 PM in.vj.calc.Calculator2 main
+INFO: result is: 1926
+Mar 31, 2026 2:08:58 PM in.vj.calc.Calculator2 main
+INFO: =========================================
+Mar 31, 2026 2:08:59 PM in.vj.calc.Calculator2 main
+INFO: User has provided no1 i.e. 85
+Mar 31, 2026 2:09:04 PM in.vj.calc.Calculator2 main
+INFO: User has provided no2 i.e. 987
+Mar 31, 2026 2:09:10 PM in.vj.calc.Calculator2 main
+INFO: User has provided symbol i.e. +
+Mar 31, 2026 2:09:10 PM in.vj.calc.Calculator2 main
+INFO: result is: 1072
