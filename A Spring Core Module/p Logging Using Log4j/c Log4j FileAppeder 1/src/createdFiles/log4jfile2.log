@@ -1,0 +1,4 @@
+FATAL 2026-04-03 18:13:27,626 This is fatel message
+ERROR 2026-04-03 18:13:27,627 This is error message
+WARN 2026-04-03 18:13:27,633 This is warn message
+INFO 2026-04-03 18:13:27,634 This is info message
