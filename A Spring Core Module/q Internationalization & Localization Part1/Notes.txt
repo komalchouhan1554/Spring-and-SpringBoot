@@ -1,0 +1,36 @@
+=> Whenever we create an application, we always want to execute it for different countries having different 
+    languages and time zones and cultures.
+
+=> For this purpose we use "Internationalization" and "Localization"
+
+=> Some data or information that is different for different countries :-
+    = Number
+    = Currency
+    = Date
+    = Time
+    = Messages
+    = Phone Numbers
+    = Address
+    = etc
+========================================================================================================================
+
+=> Internationalization :-
+    -> It is also known as "I18N"
+    -> Internationalization means designing and creating the application (web or software) in such a way that makes 
+        them easy to adapt for the people of different countries or cultures.
+    -> It's like making the foundation that can later be customized to fit for the preferences and languages of 
+        different countries.
+
+
+=> Localization
+-> It is also known as "L10N"
+-> It is like taking the foundation from Internationalization and customizing it for a specific reason or language or culture.
+
+=> To achieve Internationalization and Localization, java has provided some pre-defined classes :-
+1. Locale
+2. NumberFormat
+   DecimalFormat
+3. DateFormat
+   SimpleDateFormat
+4. ResourceBundle
+    etc..
