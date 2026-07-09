@@ -1,0 +1,17 @@
+=> ResourceBundle :-
+   -> It is an abstract class which is present in "java.util" package
+   -> It is used to achieve internationalization wrt messages (string) or images etc.
+
+   -> NOTE : We have to use properties file
+
+------------------------------------------------------------------------------------------
+
+=> Naming convention of "properties file" :-
+
+   -> basename_languageCode_countryCode_systemVarient.properties
+
+   -> For example :-
+        MessageBundle_en_US.properties
+        MessageBundle_hi_IN.properties
+
+===========================================================================================
