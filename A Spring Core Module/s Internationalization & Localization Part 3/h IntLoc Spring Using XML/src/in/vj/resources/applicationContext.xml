@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+
+
+    <!-- bean definitions here -->
+    <bean class = "org.springframework.context.support.ResourceBundleMessageSource" id = "rmsId">
+    		<property name="basename" value = "in/vj/resources/MessageBundle" ></property>
+    </bean>
+    
+    <bean class = "in.vj.beans.Student" name = "stdObj" >
+    		<property name="name" value = "Vishal"/>
+    		<property name="country" value = "India"/>
+    		<property name="msgSource" ref = "rmsId"></property>
+    </bean>
+
+</beans>
