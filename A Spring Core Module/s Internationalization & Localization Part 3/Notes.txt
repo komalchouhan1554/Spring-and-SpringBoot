@@ -1,0 +1,6 @@
+=> I18N and L10N in Spring :-
+   -> To achieve I18N and L10N in spring we use following classes and interfaces :-
+        1. MessageSource 			 <interface>
+        2. ResourceBundleMessageSource 		 <class>
+        3. ReloadableResourceBundleMessageSource <class>
+        
