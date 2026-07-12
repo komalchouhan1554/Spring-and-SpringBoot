@@ -1,0 +1,92 @@
+ => SpEL :-
+   -> SpEL stands for "Spring Expression Language"
+   -> SpEL is an "Expression Langauge" which allows you to define and evaluate the expressions at runtime.
+   -> Features supported by SpEL are :-
+        1. Operators :-
+             = Arithmetic Operators
+                  -> +, -, *, / etc
+             = Relational Operators
+                  -> ==   or   eq
+                  -> !=   or   ne
+                  -> >    or   gt
+                  -> <    or   lt
+                  -> >=   or   ge
+                  -> <=   or   le
+             = Logical Operators
+                  -> &&   or   and
+                  -> ||   or   or
+                  -> !    or   not
+             = Ternary Operator
+                  -> variable = conditional-expression ? expression1 : expression2
+             = Type Operator
+                  -> T(ClassName)
+
+        2. Expressions :-
+             = Literal Expressions
+             = Method Invocation
+             = Constructor Invocation
+             = Regular Expressions (RegEx)
+             = Class Expressions
+             = Templated Expressions
+               etc
+
+        3. Accessing arrays, lists, maps etc
+
+        4. Bean References
+           etc
+
+   -> How to use SpEL :-
+        = We can use SpEL by 2 ways :-
+             1. Using pre-defined interfaces and classes
+             2. #{expression}
+
+================================================================================
+
+=> Pre-defined interfaces and classes in SpEL are :-
+   1. ExpressionParser <interface>
+   2. SpelExpressionParser <class>
+
+   3. Expression <interface>
+   4. SpelExpression <class>
+
+   5. EvaluationContext <interface>
+   6. StandardEvaluationContext <class>
+
+   -> NOTE : Above all interfaces and classes are present in "org.springframework.expression".
+
+------------------------------------------------------------------------------------------------
+
+1. ExpressionParser :-
+   -> It is an interface which is responsible to parse (resolve) a string expression.
+   -> Method :-
+        = parseExpression(-)
+
+2. SpelExpressionParser :-
+   -> It is an implemented class for ExpressionParser.
+
+
+---------------------------------------------------------------------------------------------------
+
+3. Expression :-
+   -> It is an interface which is responsible to evaluate the string expression.
+   -> Methods :-
+        = getValue(-)
+        = getValueType()
+        = getValueTypeDescriptor()
+        = getExpressionString()
+          etc
+
+4. SpelExpression :-
+   -> It is an implemented class for Expression.
+
+------------------------------------------------------------------------------------------------------
+
+5. EvaluationContext :-
+   -> It is an interface which is responsible for providing the context in which expressions are.
+   evaluated. It holds the variables, functions and other contextual information required for evaluating
+   SpEL expression.
+
+6. StandardEvaluationContext :-
+   -> It is an implemented class for EvaluationContext.
+
+--------------------------------------------------------------------------------------------------------
