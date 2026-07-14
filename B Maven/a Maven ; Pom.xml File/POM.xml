@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+     <!-- 1. Project Information -->
+     <modelVersion>4.0.0</modelVersion>
+
+     <groupId>com.example</groupId>
+     <artifactId>my-project</artifactId>
+     <version>1.0.0</version>
+
+     <name>My Project</name>
+     <description>A sample Maven project</description>
+     <url>https://github.com/example/my-project</url>
+
+     <licenses>
+          <license>
+               <name>Apache License, Version 2.0</name>
+               <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+          </license>
+     </licenses>
+
+     <developers>
+          <developer>
+               <id>deepak123</id>
+                <name>Deepak Panwar</name>
+                <email>deepak@gmail.com</email>
+            </developer>
+     </developers>
+
+
+    <!-- 2. Scm (Source Control Management) -->
+    <scm>
+        <connection>scm:git:https://github.com/example/my-project.git</connection>
+        <developerConnection>scm:git:https://github.com/example/my-project.git</developerConnection>
+        <url>https://github.com/example/my-project</url>
+    </scm>
+
+
+    <!-- 3. Properties -->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <!-- 4. Dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 5. Build Settings -->
+    <build>
+        <plugins>
+            <plugin>
+                <!-- Configuration for Compiler Plugin -->
+            </plugin>
+            <plugin>
+                <!-- Configuration for Surefire Plugin -->
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <!-- 6. Plugins and Goals Configuration -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <!-- Configuration for Compiler Plugin -->
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <!-- Configuration for Surefire Plugin -->
+            </plugin>
+        </plugins>
+    </build>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <!-- 7. Repositories -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <!-- 8. Reporting -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- 9. Profiles -->
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- Define specific configuration for development environment -->
+        </profile>
+        <profile>
+            <id>production</id>
+            <!-- Define specific configuration for production environment -->
+        </profile>
+    </profiles>
+
+</project>
