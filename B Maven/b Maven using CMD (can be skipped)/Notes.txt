@@ -1,0 +1,49 @@
+=> How to download and install maven :-
+   1. Download the zip file from : https://maven.apache.org/download.cgi.
+   2. Extract the downloaded file.
+   3. Open CMD and check maven version i.e. "mvn -version".
+   4. If it provides error i.e. mvn is not recognized as an internal or external command, then we have
+   to set the path.
+   5. Then set the path in environment variables -
+        D:\Softwares\Maven\apache-maven-3.9.4-bin\apache-maven-3.9.4\bin
+   6. Then again check for maven version i.e. "mvn -version".
+
+================================================================================
+
+=> How to create Maven Project in CMD :-
+   1. Cammand = mvn archetype:generate.
+   2. Choose archetype : 2071 (quickstart).
+        NOTE : This number can be changed according to version.
+   3. Choose the version number - 5 (1.0 version).
+   4. Provide project details :-
+        = groupId : in.vishaljadhav (it is organization domain in reverse order)
+        = artifactId : FirstMavenProject
+        = version : 1.0
+        = package : in.vishaljadhav.main
+   5. Press Y for confirm.
+
+=> How to create Maven Project in CMD using single command :-
+   -> For quickstart project :-
+       = mvn archetype:generate -DgroupId=in.smartprogramming -DartifactId=SecondMavenProject -Dversion=1.0
+         -Dpackage=in.smartprogramming.main -DarchetypeArtifactId=maven-archetype-quickstart
+
+   -> For web application project :-
+       = mvn archetype:generate -DgroupId=in.smartprogramming -DartifactId=ThirdMavenProject -Dversion=1.0
+         -Dpackage=in.smartprogramming.main -DarchetypeArtifactId=maven-archetype-webapp
+============================================================================================================
+
+=> How to compile and run maven project :-
+   1. Choose the location in the project - D:\Maven Projects\FirstMavenProject>
+   2. Compile the project - mvn compile
+   3. Run the project - mvn exec:java -Dexec.mainClass="in.vishaljadhav.main.App"
+
+============================================================================================================
+
+=> How to create maven project package (jar or war or ear) and execute it :-
+   1. mvn package
+   2. set classpath=D:\Maven Projects\SecondMavenProject\target\SecondMavenProject-1.0.jar
+      (location of jar file)
+   3. java in.vishaljadhav.main.App
+      (java fully_qualified_package_name.MainClassName)
+
+============================================================================================================
