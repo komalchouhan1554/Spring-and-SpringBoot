@@ -1,0 +1,17 @@
+=> What is archetype ?
+-> It is the project template or project model
+-> For simple maven project in java, we can select the archetype i.e. "maven-archetype-quickstart"
+   and for web application we can select "maven-archetype-webapp" archetype
+
+=> What is groupId ?
+-> The groupId is a unique identifier for a group or organization.
+-> It helps to distinguish your project from others, especially when projects from different sources
+   might share the same artifactId
+-> It follows a reverse domain name pattern like www.xyz.com -> com.xyz
+
+=> What is artifactId ?
+-> It is the unique project name.
+-> Normally we can provide the name as :-
+   = MavenFirstProject
+   = mavenFirstProject
+   = maven-first-project
