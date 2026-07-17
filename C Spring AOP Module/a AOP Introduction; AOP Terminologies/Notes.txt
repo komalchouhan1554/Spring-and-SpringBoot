@@ -1,0 +1,119 @@
+=> Spring AOP Module :-
+--------------------------
+
+=> AOP :-
+   -> AOP stands for "Aspect Oriented Programming"
+   -> AOP is a "Programming Paradiagm" or "Approach" that focus on modularization and managing the
+   cross-cutting concerns in software development
+   -> AOP is implemented by a lot of languages like java, python, php, c++ etc
+
+   -> Unlike traditional Object Oriented Programming (OOP) which focus on classes and objects, Aspect
+   Oriented Programming (AOP) is more focused on aspects
+
+   -> What is the need of AOP ?
+        = Scenerio : Create a banking application having multiple transactions i.e. UPI, internet
+        banking, mobile banking, wallet etc. It will also use security, logging, OTP, sms etc
+        = Problem : If we create above application using OOP, then we have to face some problems :-
+             - our code is not neat and clean because in business logic method we have to provide another
+             type of code
+             - if we have to change any service logic method, then it will be difficult to change the
+             updates in business logic method and maintain the project
+
+        = To resolve above problems we have to use AOP
+
+   -> AOP provides complement to OOP to achieve more and clear modularity.
+
+-> Advantages of AOP :-
+   1. It provides more modularity
+   2. It improves maintainability and readability of code
+   3. It provides loosely coupled design
+   etc
+
+==============================================================
+
+
+=> Terms used in AOP :-
+   1. Aspect
+   2. Advice
+   3. Join-points
+   4. Pointcuts
+   5. Target
+   6. Proxy
+   7. Advisor
+   8. Weaving
+
+----------------------------------------
+
+=> Aspect :-
+   -> Aspect is a module or a concept that encapsulates a specific cross-cutting concern such as
+      security, logging, transactions, error handling etc
+   -> It provides services that can be applied to multiple parts of an application
+
+=> Cross-cutting concerns :-
+   -> A cross-cutting concern refers to a specific functionality or requirement (logging, security,
+      transactions, error handling etc) in software application that affects multiple parts of the codebase.
+
+=> Advice :-
+   -> Advice is the actual code that implements a specific aspect's behaviour.
+   -> It's the code that runs at designated points in our application typically at join-points to
+      achieve the designed cross-cutting concern.
+   -> For example :-
+      = For logging we use Java Logging API, Log4j, Tinylog etc
+      = For security we use JAAS (Java Authentication and Authorization Service)
+      = For transactions we use JTA (Java Transaction API)
+      etc
+
+   -> There are total 5 types of advices :-
+      1. Before Advice
+      2. After Advice
+      3. After Returning Advice
+      4. After Throwing Advice
+      5. Around Advice
+
+   1. Before Advice
+      = Runs before the target method's execution.
+      = Often used for tasks like input validations or setup operations.
+
+   2. After Advice
+      = Runs after the target method's execution, regardless of its outcome
+      = Often used for cleanup tasks or actions that need to occur after the main logic.
+
+   3. After Returning Advice
+      = Runs after the target method's successfully execution (no runtime exception).
+      = Used for tasks that should only happen when a method completes successfully.
+
+   4. After Throwing Advice
+      = Runs after the target method throws an exception.
+      = Useful for handling exception cases, logging errors, performing recovery actions etc.
+
+   5. Around Advice
+      = Runs before and after the method execution.
+      = Often used for tasks that require manipulation before and after method execution.
+
+
+=> Join-points :-
+    -> A join-point is the location in the application where an aspect or advice can be applied or plugged-in.
+    -> A join-point can be before or after executing method, before throwing an exception, before or after modifying an instance variable etc.
+
+=> Pointcuts :-
+    -> It is the join-point or location where aspect or advice is plugged-in or implemented.
+
+=> Target :-
+    -> Target refers to the specific components of the code such as methods or classes where we want to apply the advice.
+
+=> Proxy :-
+    -> Proxy is an object which contains the target object and advice (advisor) details.
+
+=> Advisor :-
+    -> Advisor is the group of "advice" and "pointcuts" which is passed to the proxy factory object.
+
+=> Weaving :-
+    -> It is the process of applying the aspect on the target object in order to generate proxy.
+    -> Weaving can be achieved at :-
+        = compile time
+        = load time
+        = runtime
+
+-> NOTE : Spring AOP performs weaving at runtime
+
+=========================================================================================================
