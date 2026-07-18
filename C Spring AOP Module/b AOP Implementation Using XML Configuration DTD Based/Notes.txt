@@ -1,0 +1,43 @@
+=> How to achieve Aspect Oriented Programming in Spring :-
+   -> We can achieve AOP by 2 ways :-
+        A) Using Spring's built-in AOP Framework
+             = Spring provides its own AOP framework that simplifies the implementation of AOP in spring
+             = Spring's built-in AOP Framework provides 2 ways to achieve AOP :-
+                  1. Spring XML Configuration
+                       1.1 DTD Based (Older Approach)
+                       1.2 XSD Based (Modern Approach)
+                  2. Java & Annotation-Based Configuration
+                       - using @Configuration and @EnableAspectJAutoProxy (Programmatic Configuration)
+        B) using AspectJ Framework (implementation) in Spring
+             = The AspectJ framework provides more advanced AOP capabilities which can be integrated with
+             spring applications
+             = We can achieve AOP by 2 ways :-
+                  1. XML Configuration (Advanced)
+                  2. Annotations (Concise & Widly Used)
+
+================================================================================
+
+=> Difference between DTD and XSD :-
+   1. DTD stands for Document Type Definition.
+      XSD stands for XML Schema Definition.
+
+   2. DTD is older approach.
+      XSD is new approach.
+
+   3. DTD is less extensible as compared to XSD. It lacks features like data typing, element grouping etc.
+      XSD is highly extensible. It provides features like data typing, element grouping etc.
+
+   4. DTD has limited support for namespace.
+      XSD has highly support for namespace.
+
+   5. DTD uses a simpler and less strict syntax.
+      XSD uses more complex and strict syntax.
+
+   etc
+
+================================================================================
+
+=> Spring XML Configuration (DTD Based) :-
+   -> This is older approach where we define aspects, advices, pointcuts etc using XML based configuration.
+
+================================================================================
