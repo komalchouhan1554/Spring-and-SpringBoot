@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd"> 
+        
+        <!-- bean definitions -->
+        <bean class="in.vj.services.BankTransactions" id = "bankTransID" />
+           
+        <!-- Aspects Bean Definitions -->
+        <bean class="in.vj.aspects.LoggingAspects" id = "logAspectsID" />
+        
+        <!-- AOP Configuration -->
+        <aop:config>
+        		<aop:aspect ref = "logAspectsID">
+        			<aop:pointcut expression="execution(* in.vj.services.BankTransactions.transactionUsingInternetBanking())" id="btPointCut1"/>
+        			<aop:before method="myLogging" pointcut-ref="btPointCut1"/>
+        			<aop:after method="myLogging" pointcut-ref="btPointCut1"/>
+        			
+        			<aop:pointcut expression="execution(* in.vj.services.BankTransactions.transactionUsingUPI())" id="btPointCut2"/>
+        			<aop:before method="myLogging" pointcut-ref="btPointCut2"/>
+        			<aop:after method="myLogging" pointcut-ref="btPointCut2"/>
+        		</aop:aspect>
+        
+        </aop:config>
+        		
+        
+</beans>
