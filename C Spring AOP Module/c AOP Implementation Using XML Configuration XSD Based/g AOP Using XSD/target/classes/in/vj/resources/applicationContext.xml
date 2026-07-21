@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd"> 
+        
+        <!-- Bean definitions -->
+        <bean class="in.vj.services.BankTransactions" id = "bankTransID" />
+        <bean class="in.vj.services.PaytmTransactions" id = "paytmTransID" />
+           
+        <!-- Aspects Bean Definitions -->
+        <bean class="in.vj.aspects.LoggingAspects" id = "logAspectsID" />
+         <bean class="in.vj.aspects.SecurityAspects" id = "SecAspectsID" />
+        
+        <!-- AOP Configuration -->
+        <aop:config>
+        		<aop:aspect ref = "logAspectsID">
+        			<aop:pointcut expression="execution(* in.vj.services.BankTransactions.*(..))" id="btPointCut"/>
+        			<aop:before method="myLogging" pointcut-ref="btPointCut"/>
+        			<aop:after method="myLogging" pointcut-ref="btPointCut"/>
+        		</aop:aspect>
+        		
+        		<aop:aspect ref = "logAspectsID">
+        			<aop:pointcut expression="execution(* in.vj.services.PaytmTransactions.*(..))" id="ptPointCut"/>
+        			<aop:before method="myLogging" pointcut-ref="ptPointCut"/>
+        		</aop:aspect>
+        		
+        		<aop:aspect ref = "SecAspectsID">
+        			<aop:pointcut expression="execution(* in.vj.services.BankTransactions.*(..))" id="btPointCut2"/>
+        			<aop:before method="mySecurity" pointcut-ref="btPointCut2"/>
+        			<aop:after method="mySecurity" pointcut-ref="btPointCut2"/>
+        			
+        			<aop:pointcut expression="execution(* in.vj.services.PaytmTransactions.*(..))" id="ptPointCut2"/>
+        			<aop:before method="mySecurity" pointcut-ref="ptPointCut2"/>
+        		</aop:aspect>
+        
+        </aop:config>
+        		
+        
+</beans>

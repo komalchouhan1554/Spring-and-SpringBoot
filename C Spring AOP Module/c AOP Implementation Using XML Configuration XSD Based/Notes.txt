@@ -1,0 +1,26 @@
+=> Spring XML Configuration (XSD Based) :-
+    -> In this type of approach we use namespace tags for declaring aspects, advices, pointcuts etc.
+    -> The parent (main) namespace tag is <aop:config>. All the configurations i.e. aspects, advices,
+    pointcuts are placed inside this tag.
+    -> To use <aop:config> tag, we have to use AOP-Schema in spring.xml file configuration.
+
+    -> Syntax :-
+
+    -> What is expression ?
+        = Expression is the way to describe the pointcuts programtically
+        = We have to provide Pointcut Designators (POD) in expression i.e. execution, within, this, bean etc.
+        = Syntax :-
+            expression = "execution(----define expression----)"
+
+        = POD execution syntax :-
+            1. execution(* in.sp.services.BankTransaction.*())
+            2. execution(* in.sp.services.BankTransaction.*(..))
+            3. execution(* in.sp.services.BankTransaction.*(String, ..))
+            4. execution(* *(..))
+
+    -> Types of advices :-
+        1. <aop:before>
+        2. <aop:after>
+        3. <aop:after-returning>
+        4. <aop:after-throwing>
+        5. <aop:around>
