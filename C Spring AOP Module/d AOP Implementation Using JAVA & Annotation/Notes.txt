@@ -1,0 +1,6 @@
+=> How to achieve AOP using Java & Annotation-Based Configuration :-
+    -> We have to create Java Configuration File in which we have to use @Configuration and @Bean
+    annotation. And we also have to use some annotations i.e. @EnableAspectJAutoProxy, @Aspect, @Before,
+    @After, @AfterReturning, @AfterThrowing, @Around etc.
+
+=====================================================================================================
