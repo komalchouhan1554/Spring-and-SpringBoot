@@ -1,0 +1,19 @@
+=> Database :-
+    -> A database is an organized collection of structured information or data typically stored
+    electronically in computer system
+    -> A database is usually controlled by "Database Management System (DBMS)"
+    -> Few examples of DBMS are :-
+        - MySQL
+        - Microsoft SQL Server
+        - PostgreSQL
+        - SQLite
+        - MongoDB
+        - Cassandra
+        - DB2
+          etc
+
+    -> To store the data in database we have to use one query langauge i.e. SQL, Oracle etc
+
+=====================================================================================================
+
+=> Download & Install MySQL
