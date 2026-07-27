@@ -1,0 +1,36 @@
+=> JDBC :-
+    -> JDBC stands for Java Database Connectivity
+    -> JDBC is a technology which is used to interact the java application with database
+
+    -> JDBC is also an API (pre-defined interfaces, classes and packages)
+    -> NOTE : JDBC is an abstraction which is provided by Sun-Microsystems and implemented by database
+    vendors (and provide them in the form of jar files)
+
+    -> Working of JDBC :-
+        = Diagram
+
+    -> JDBC Components :-
+        = Driver (Translator) :
+            - It is used to convert the java calls to database specific calls and database specific calls
+            to java calls
+        = Connection (Road) :
+            - It is used to create connection between java application and database
+        = Statement / PreparedStatement / CallableStatement (Truck) :
+            - It is used to send the SQL Queries (with data) from java application to database and get
+            the result
+        = ResultSet (Box) :
+            - It is used to store the output from database
+
+    -> Steps to create database connection :-
+        1. Load and register driver
+            = Class.forName("Driver ClassName");
+
+        2. Establish the connection between java application and database
+            = DriverManager.getConnection("url", "username", "password");
+
+        3. Create Statement / PreparedStatement / CallableStatement object
+        4. Send and execute SQL Query
+        5. Process the result
+        6. Close all the resources
+
+===============================================================================================================
