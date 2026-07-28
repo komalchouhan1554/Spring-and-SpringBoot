@@ -1,0 +1,33 @@
+=> Steps to execute SQL query using JDBC :-
+    1. Load and register driver
+        -> Class.forName("Driver ClassName");
+
+    2. Establish the connection between java application and database
+        -> Connection con = DriverManager.getConnection("url", "username", "password");
+
+    3. Create Statement / PreparedStatement / CallableStatement object
+        -> Statement st = con.createStatement();
+        -> PreparedStatement ps = con.prepareStatement();
+        -> CallableStatement cs = con.prepareCall();
+
+    4. Send and execute SQL query
+        -> int count = ps.executeUpdate();
+        -> ResultSet rs = ps.executeQuery();
+
+    5. Process the result
+
+    6. Close all the resources
+        -> ps.close();
+        -> con.close();
+
+=====================================================================================================
+
+=> CRUD Operations :-
+    = C : Create (Insert)
+    = R : Retrieve (Select)
+    = U : Update
+    = D : Delete
+
+    -> These operations are commonly used when working with database to manipulate the data
+
+=====================================================================================================
