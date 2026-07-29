@@ -1,0 +1,38 @@
+=> ResultSet :-
+    -> It is an interface which contains the data and manages the cursor to access the data
+    -> Method of ResultSet :-
+        1. Navigation Methods :-
+            = next()
+            = previous()
+            = beforeFirst()
+            = afterLast()
+            = first()
+            = last()
+            = abosolute(-)
+            = relative(-)
+              etc
+
+        2. Getter Methods :-
+            = getString(-)
+            = getInt(-)
+            = getXXX(-)
+              etc
+
+    -> Types of ResultSet cursor :-
+    
+        1. Forward-Only ResultSet
+            = This type of resultset allows the traversal of data only in forward direction
+            = It's the most memory-efficient type
+            = Syntax :-
+                ResultSet.TYPE_FORWARD_ONLY
+
+        2. Scrollable ResultSet
+            = This type of resultset allows the traversal of data in forward and backword direction
+            = These are of two types :-
+                - ResultSet.TYPE_SCROLL_INSENSITIVE
+                - ResultSet.TYPE_SCROLL_SENSITIVE
+
+        = How to use ?
+            - PreparedStatement ps = con.prepareStatement("select query", ResultSet.TYPE_FORWARD_ONLY);
+
+=====================================================================================================
