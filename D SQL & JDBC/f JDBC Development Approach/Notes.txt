@@ -1,0 +1,11 @@
+=> How to use JDBC in real world projects development :-
+    = NOTE : JDBC is less used for enterprise applications because there are a lot of drawbacks of JDBC
+    and to remove these drawbacks we use frameworks i.e. hibernate, JPA, Data JPA etc.
+
+    1. Use try-catch-finally block
+    2. Use try-with-resources
+    3. Use static method approach
+
+    = NOTE : Above all approches are not efficient. For database connections we use "connection pooling" concept.
+
+========================================================================================================
