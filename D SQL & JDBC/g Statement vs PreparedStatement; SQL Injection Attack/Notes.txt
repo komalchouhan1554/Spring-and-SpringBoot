@@ -1,0 +1,32 @@
+=> Statement :
+    -> Statement objects are used to execute simple SQL queries without any parameters.
+    -> Statement are best suited for static queries that do not involve any user inputs.
+    -> Statement performance is low as compared to PreparedStatement.
+    -> Statement are less secured.
+
+=> PreparedStatement :
+    -> PreparedStatement objects are used to execute parametrized SQL queries.
+    -> PreparedStatement are best suited for dynamic queries which involves user inputs.
+    -> PreparedStatement performance is fast as compared to Statement.
+    -> PreparedStatement are more secured.
+
+=====================================================================================================
+
+=> Why we should use PreparedStatement as compared to Statement ?
+    1. Fast performance
+    2. More secure
+    3. Improves code reability and maintability
+       etc
+
+=====================================================================================================
+
+=> SQL Injection Attack :-
+    -> SQL Injection is a type of cybersecurity attack that targets the database and is used to
+    manipulate or gain unauthorized access to the data stored within the database.
+    -> The root cause of SQL injection is mixing of "SQL query" and "data".
+    -> It occurs only in Statement interface.
+
+    -> How PreparedStatement protects from SQL Injection Attack ?
+        = Becuase "SQL Query" and "data" are sent separately to the database server.
+
+=====================================================================================================
