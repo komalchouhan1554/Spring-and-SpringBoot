@@ -1,0 +1,18 @@
+=> Batch Updations :-
+    -> It is a batch of updates grouped together and sent to the database in one batch rather then
+    sending them one by one
+    -> Advantages :-
+        = Application performance will be improved
+        = Network traffic will be reduced
+    -> Disadvantages :-
+        = It can only be used for "insert, update and delete" SQL query, not for select SQL query
+        = If any single SQL query gets an error then it will disturb the flow of program
+
+    -> How to achieve batch updations :-
+        = For batch updations we have 3 methods :-
+            1. addBatch(String query)
+            2. executeBatch() -> int[]
+            3. clearBatch()
+        = NOTE : These methods are present in Statement and PreparedStatement interface
+
+=====================================================================================================
