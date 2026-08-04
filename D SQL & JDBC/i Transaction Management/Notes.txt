@@ -1,0 +1,63 @@
+>> Transaction Management <<
+----------------------------
+
+=> What is transaction :-
+    -> A group of several SQL operations as a single unit where SQL operations are executed on the
+    principal of either all or none
+    -> Properties of transaction :-
+        = It follows the ACID property :-
+            - A (Atomicity) : Either perform all operations or none
+            - C (Consistency) : The databse state must be stable
+            - I (Isolation) : All the transactions must be executed independently, one transaction must
+            not give effect to another transaction
+            - D (Durability) : The changes of successful transaction occurs even if the system/database
+            failure occurs
+
+----------------------------
+
+=> Transaction in MySQL Database :
+    -> SELECT @@AUTOCOMMIT; : to check the autocommit status. If its 1 then it will store the data
+    permanently and if value is 0 then it will store the data temporary.
+
+    -> SET AUTOCOMMIT=0; : It will change the autocommit value to 0 (temporary).
+
+    -> COMMIT; : It will store the temporary data permanenetly.
+
+    -> ROLLBACK; - It will rollback (remove) the data.
+
+----------------------------
+
+=> How to implement transaction management in JDBC :-
+    -> For transaction management, we have 3 methods :-
+        1. setAutoCommit(boolean)
+        2. commit()
+        3. rollback()
+    -> NOTE : These methods are present in Connection interface.
+
+    -> Syntax :-
+
+        Connection con = ------
+
+        try
+        {
+            con.setAutoCommit(false);
+
+            //SQL operations 1
+            //SQL operations 2
+            //SQL operations 3
+            //SQL operations 4
+
+            if(condition -> true)
+            {
+                con.commit();
+            }
+            else
+            {
+                con.rollback();
+            }
+        }
+        catch(Exception e)
+        {
+            con.rollback();
+            e.printStackTrace();
+        }
