@@ -1,0 +1,81 @@
+=> We can get connection object by 2 ways :-
+    1. DriverManager (class) - "java.sql" package
+    2. DataSource (interface) - "javax.sql" package
+
+-----------------------------------------------------------------------------
+
+=> DriverManager :-
+    -> It is a class which is present in "java.sql" package.
+    -> How to get connection object using DriverManager :-
+        >> Connection con = DriverManager.getConnection("URL", "USERNAME", "PASSWORD");
+
+    -> Drawbacks of DriverManager :-
+        1. DriverManager takes a lot of time to open database connection in a network which will slow down the application performance.
+        2. Whenever there is increase in the number of clients, the performance of the application will be decreased.
+        3. The connection object created using DriverManager is not reusable, thus whenever we need connection object, it will again take time to create.
+
+-----------------------------------------------------------------------------
+
+=> DataSource :-
+    -> It is an interface which is present in "javax.sql" package.
+    -> It defines a standardized way to obtain database connection.
+    -> Some basic implementation of DataSource are :-
+        1. MysqlDataSource : used for MySQL database.
+        2. OracleDataSource : used for Oracle database.
+        3. JdbcDataSource : used for H2 database (open-source, in-memory, lightweight database written in java)
+          etc..
+
+        >> NOTE : Above provided implemented classes does not have in-built connection pooling feature.
+
+    -> Why we should use DataSource instead of DriverManager :-
+        1. Easy configuration.
+        2. Easy to switch across different databases.
+        3. Automatic driver loading.
+        4. Cleaner and more readable code.
+
+        >> NOTE : "Connection Pooling" is the most important advantage of DataSource
+
+=====================================================================================================
+
+=> Connection Pool :-
+    -> A connection pool is a group of reusable connection objects for a particular database.
+    -> When an application requests for connection object, it obtains one from the pool.
+    -> When an application closes the connection, the connection object returns back to the pool.
+
+=> Connection Pooling :-
+    -> Connection Pooling is a feature or technique that involves managing and reusing existing database
+    connection objects in connection pool, instead of creating new connections from scratch every time an
+    application interacts with the database.
+    -> This improves the application performance and resource utilization by minimizing the time and
+    resource needed to establish the database connection.
+
+    -> Real World Example :
+        = Cooking in Restaurants.
+
+    -> Different ways to provide connection pooling :-
+        1. Using third-party connection pooling libraries
+            = HikariCP
+                - Known for its high performance and lightweight nature, making it suitable for modern application.
+                - "HikariDataSource" is an implemented class for DataSource
+            = Apache Commons DBCP
+                - A widely used connection pooling library with configurable options for connection management.
+                - "BasicDataSource" is an implemented class for DataSource.
+            = C3P0
+                - It offers features like connection testing and customization options.
+                - "ComboPooledDataSource" is an implemented class for DataSource.
+            = BoneCP
+                - It is also lightweight connection pooling library designed for speed and efficiency.
+                - "BoneCPDataSource" is an implemented class for DataSource.
+              etc
+
+        2. Application server-provided connection pooling
+            = Many application servers i.e. Apache Tomcat, WildFly etc come with built-in connection pooling capabilities.
+        3. Spring framework
+            = Spring framework also provides its own connection pooling feature support through its DataSource abstraction.
+            = Spring framework also provides facility to integrate third party connection pooling libraries.
+          etc
+
+    -> NOTE : JDBC does not provide in-built connection pooling feature but we can integrate third-party
+    connection pooling libraries with JDBC.
+
+=====================================================================================================
