@@ -1,0 +1,51 @@
+=> Spring JDBC Module :-
+    -> Spring JDBC provides mechanism to connect the spring application with database and execute SQL queries.
+    -> NOTE : It internally uses JDBC API (but solves the problem of Plain-JDBC).
+
+    -> Spring provides some classes which are as follows :-
+        1. DriverManagerDataSource
+        2. JdbcTemplate
+        3. NamedParameterJdbcTemplate
+          etc
+
+-----------------------------------------------------------------------------
+
+=> DriverManagerDataSource :-
+    -> It is an implemented class of DataSource interface which is present in "org.springframework.jdbc.datasource" package.
+    -> It is used for :-
+        1. Database configurations
+        2. Driver loading
+        3. Connection creation
+          etc
+
+-----------------------------------------------------------------------------
+
+=> JdbcTemplate :-
+    -> It is the central class in Spring-JDBC support classes.
+    -> It is used for :-
+        1. Simplifies JDBC
+            = JdbcTemplate reduces boilerplate JDBC code making it readable and concise.
+        2. Connection Management
+            = It manages connections, reducing the need for manual connection handling.
+        3. Exception Handling :-
+            = Automatically translates the database exceptions into Spring's DataAccessExceptions which
+            simplifies the error handling.
+        4. SQL execution :-
+            = Executes SQL queries i.e. insert, update, delete, select etc.
+        5. Parametrization :-
+            = Support both positional and named parameters in SQL queries.
+        etc
+
+    -> Methods of JdbcTemplate :-
+        1. update(-)
+            = used for insert, update and delete SQL queries.
+        2. query(-)
+           queryForList(-)
+           queryForMap(-)
+           queryForObject(-)
+           queryForRowSet(-)
+            = used for select SQL queries
+        3. execute(-)
+            = used for DDL (create, drop, alter etc) SQL queries.
+
+-----------------------------------------------------------------------------
