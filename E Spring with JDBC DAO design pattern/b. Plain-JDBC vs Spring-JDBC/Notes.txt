@@ -1,0 +1,44 @@
+=> Difference between Plain-JDBC and Spring-JDBC :-
+
+    1. = In Plain-JDBC we have to get the connection object manually.
+       = In Spring-JDBC, connection object is automatically provided by JdbcTemplate class.
+
+    2. = In Plain-JDBC we have following steps :-
+          i. Load and register driver
+                Class.forName("----");
+         ii. Create connection object
+                Connection con = DriverManager.getConnection("url", "username", "password");
+        iii. Create Statement, PreparedStatement or CallableStatement object
+                Statement st = con.createStatement();
+         iv. Write and execute SQL query
+                st.executeQuery("-----sql query----");
+          v. Close the resources
+                st.close();
+                con.close();
+          -> NOTE : above 1,2,3 and 5th steps are always same but 4th step is varies. These common steps
+          (1,2,3,5) are known as boiler-plate code which we have to write again and again.
+
+       = In Spring-JDBC we dont need to provide boiler-plate code.
+
+    3. = In Plain-JDBC we have to handle the compile time exceptions using try-catch block or throws keyword.
+       = In Spring-JDBC we dont need to handle the exceptions because it converts the compile time
+       exceptions into run-time exceptions.
+
+    4. = In Plain-JDBC, select query will retrieve and store the records in ResultSet.
+       = In Spring-JDBC, select query can retrieve and store the records in the form of Collections
+       objects i.e. List, Map or Bean object.
+
+    5. = In Plain-JDBC, as result is stored in ResultSet which is non-synchronized and thus it cannot be
+       transferred over the network.
+       = In Spring-JDBC, as result is stored in Collections in Bean object which are synchronized and
+       thus it can be transferred over the network.
+
+    6. = In Plain-JDBC, if we want to store the result in bean object or in collection object then we
+       have to provide the code manually.
+       = In Spring-JDBC, if we want to store the result in bean object or in collection object, then we
+       have pre-defined methods and RowMapper interface.
+
+    7. = Plain-JDBC provides less support for transaction management.
+       = Spring-JDBC provides good support for transaction management.
+
+=====================================================================================================
