@@ -1,0 +1,20 @@
+=> NamedParameterJdbcTemplate :-
+    -> It is the class which is provided by Spring framework as the part of Spring-JDBC module
+    -> It provides "higher-level abstraction" and more convenient way to work with SQL queries
+        = A "higher-level abstraction" means that it provides user-friendly way to interact with the
+        system as compared to lower-level abstraction
+
+    -> Why we need NamedParameterJdbcTemplate :-
+        = In JdbcTemplate, we provide "Positional Parameters" which is not user-friendly because if there
+        are a lot of positional parameters then it will create confusion. To remove this confusion we use
+        NamedParameterJdbcTemplate in which we use "Named Parameters"
+
+    -> We can provide "Named Parameters" by 2 ways :-
+        1. By using Map <interface>
+            = We can use any implemented class of Map interface for eg. HashMap etc
+        2. By using SqlParameterSource <interface>
+            = We can use below implemented classes :-
+                a. MapSqlParameterSource
+                b. BeanPropertySqlParameterSource
+
+=====================================================================================================
