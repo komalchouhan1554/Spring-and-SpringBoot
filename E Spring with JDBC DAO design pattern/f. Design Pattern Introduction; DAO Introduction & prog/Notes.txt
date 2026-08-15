@@ -1,0 +1,61 @@
+=> Design Patterns :-
+	-> Design patterns are established best practices and reusable templates for solving common software design problem.
+		= "established best practices" means that these practices have been tried, tested and widely recognized as effective solutions.
+	-> They offer structured approaches to create relationships and interactions between classes and objects, promoting efficient, maintainable and scalable code.
+	-> For eg.
+		= Singleton Design Pattern
+		= Factory Design Pattern
+		= Abstract Factory Design Pattern
+		= Prototype Design Pattern
+		= DAO Design Pattern
+		= MVC Design Pattern
+		= Dependency Injection Design Pattern
+		   etc
+
+	-> NOTE : There is one book for design patterns i.e. "Design Patterns : Elements of Reusable Object-Oriented Software"
+
+=====================================================================================================
+
+=> DAO Design Pattern :-
+	-> DAO stands for "Data Access Object"
+	-> Diagram
+	-> It is used to separate the data persistence logic into a separate layer. This way, any other layer i.e. service layer etc does not know how low-level operations are performed to access the database.
+
+	-> How to achieve DAO layer :-
+		= Create different DAO package
+		= Create an interface which contains abstract methods
+		= Create an implemented class and override / implement the methods
+
+-> DAO Program using Plain-JDBC
+		interface StudentDao
+		{
+		    public boolean addStdDetailsDao(Student obj);
+		    public boolean updateStdDetailsDao(int id, Student obj);
+		    public boolean deleteStdDetailsDao(int id);
+		    public Student getStdDetailsDao(int id);
+		    public List<Student> getStdDetailsDao();
+		    //other methods
+		}
+		class StudentDaoImpl implements StudentDao
+		{
+		    public boolean addStdDetailsDao(Student obj)
+		    {
+		        //database operations
+		        return status;
+		    }
+
+		    //override and implement all methods of StudentDao
+		}
+
+		class Main
+		{
+		    main()
+		    {
+		        //---------code------
+		        StudentDao stdDao = new StudentDaoImpl();
+		        boolean status = stdDao.addStdDetailsDao(---);
+		        //------------
+		    }
+		}
+
+=====================================================================================================
