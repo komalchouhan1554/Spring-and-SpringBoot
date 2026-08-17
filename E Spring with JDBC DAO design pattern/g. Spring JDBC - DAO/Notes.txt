@@ -1,0 +1,53 @@
+=> Spring DAO :-
+    -> Spring DAO is a concept (design pattern) to work with database technologies i.e. JDBC, Hibernate, JPA etc in an easy way.
+    -> We can achieve DAO design pattern in spring by 3 ways :-
+        1. By straight-forward and traditional way
+        2. By extending DAO support classes
+        3. By using Annotations
+
+-----------------------------------------------------------------------------
+
+=> By straight-forward and traditional way :-
+    -> This approach involves the creation of custom classes to perform data access operations in a traditional way without relying on spring pre-defined classes or annotations.
+
+-----------------------------------------------------------------------------
+
+=> By extending DAO support classes :-
+    -> Spring has provided some DAO support classes (XxxDaoSupport) to simplify certain aspects of DAO development.
+    -> Spring has provided many DAO support classes and 2 main classes are :-
+        1. JdbcDaoSupport
+            = public final void setDataSource(DataSource dataSource){ - }
+            = public final void setJdbcTemplate(JdbcTemplate jdbcTemplate) { - }
+            = public final JdbcTemplate getJdbcTemplate() { - }
+              etc
+        2. NamedParameterJdbcDaoSupport
+            = public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() { - }
+
+    -> NOTE : This is not a standalone approach because we still need to extend and customize the classes to create our specific DAO's.
+
+-----------------------------------------------------------------------------
+
+
+=> By using Annotations :-
+    -> Spring provides some annotations which can simplify the configuration and make our DAO's more concise and declarative.
+    -> Main annotations are :-
+        1. @Repository
+        2. @Transactional
+
+        3. @Service
+        4. @Autowired
+
+-----------------
+
+=> @Repository :-
+    -> It is used with DAO layer.
+    -> It is a specialization of @Component.
+
+=> @Transactional :-
+    -> It is used for transaction management.
+
+=> @Service :-
+    -> It is used with service layer.
+    -> it is a specialization of @Component.
+
+----------------
