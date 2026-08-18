@@ -1,0 +1,48 @@
+>> Terms we should know 
+--------------------------
+
+=> ORM (Object-Relational Mapping) :-
+    -> ORM is a programming technique that allows data to be mapped between "Object" in object-oriented
+    programming code and "Relational Database" using XML file or annotations.
+        = We can compare it with OOP, AOP etc.
+
+    -> It will map the "Object" and "Relational Database" in such a way that :-
+        = model class(object) corresponds to the table.
+        = properties map to the table column.
+        = property / object values become row in database table
+    -> ORM simplifies database interactions in object-oriented programming langauges, making it easier for developer to work with database.
+    
+    -> Some java related ORM tools (frameworks) are :-
+        1. Hibernate
+        2. JPA (Java Persistence API)
+        3. TopLink
+        4. EclipseLink
+        5. MyBatis
+          etc
+
+    -> NOTE :-
+        = ORM is not developed by a specific individual or organization. It is a collaborative effort
+        programming technique on which many organizations are working together.
+        = ORM is typically used with relational databases (MySQL, Oracle, SQL Server, PostgreSQL etc).
+        We normally does not use ORM with NoSQL databases (MongoDB, Cassandra, Redis etc).
+
+
+-----------------------------------------------------------------------------
+
+=> Data Persistency :-
+    -> Data means information and persistency means permanent.
+    -> Data Persistency is the ability to store the data permanently in a way that it is not lost when
+    the program or system is no longer running.
+    -> To achieve data-persistency wrt java we have following techniques or technologies :-
+        1. Serialization and Deserialization
+        2. JDBC
+        3. ORM
+            = Hibernate
+            = JPA
+            = TopLink
+            = EclipseLink
+            = MyBatis
+              etc
+          etc
+
+-----------------------------------------------------------------------------
