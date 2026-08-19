@@ -1,0 +1,58 @@
+=> What is hibernate :-
+    -> Hibernate is an open-source ORM tool or framework for Java.
+    -> NOTE : Hibernate is not a core or official component of Java EE (Java Enterprise Edition) platform.
+    -> Hibernate was developed by Gavin King while working in JBoss. The project was later acquired by
+    Red Hat company.
+    -> Hibernate first version was released in 2001.
+
+    -> It simplifies database programming in java applications by mapping java objects to database
+    tables, making it easier to work with relational database.
+
+    -> Features of Hibernate :-
+        1. Database independent :-
+            = It supports various relational databases.
+        2. Automatic Table Generation :-
+            = It can generate database schema from java classes.
+        3. Query Language :-
+            = Hibernate provides its own query language i.e. HQL (Hibernate Query Language). It is
+            database-independent which allows us to write queries using a syntax that hibernate
+            translates into database-specific SQL queries.
+        4. Caching :-
+            = It provides very good cache mechanism for better performance.
+        5. Transaction Management :-
+            = It supports ACID transaction properties.
+        6. Connection Pooling :-
+            = It manages and optimizes database connections.
+        7. Integration :-
+            = It can be easily integrated with Java EE applications and Java frameworks (Spring etc).
+        8. Community Support :-
+            = It provides active open-source community for updates and support.
+          etc
+
+    -> Hibernate Architecture :-
+        = Diagram
+
+-> Components of Hibernate Architecture :
+        1. Application Layer
+            = In this layer persistence object is created.
+            = In this layer we provide business logic and persistence operations.
+            = In this layer hibernate software will be activated.
+        2. Persistence Object
+            = It is java object that represents the data and is designed to be persistent (means it can
+            stored or retrieve or modify the data from relational database).
+        3. Hibernate Configuration File
+            = It is typically an XML or Java file.
+            = It contains settings and properties for hibernate i.e. databse connection information,
+            dialect, cache settings etc.
+        4. Hibernate Mapping File
+            = A hibernate mapping file (usually in XML format) defines how java object are to be mapped
+            with database tables.
+        5. Hibernate Software
+            = When the client activates hibernate, the framework retrieves configuration details from
+            hibernate configuration file and establish the connection with database.
+            = When the client initiates persistence operation, hibernate generates the appropriate
+            database-specific SQL query and executes it.
+        6. Relational Database
+            = The persistence object will be mapped with relation-database and new table with data will be created.
+
+=====================================================================================================
