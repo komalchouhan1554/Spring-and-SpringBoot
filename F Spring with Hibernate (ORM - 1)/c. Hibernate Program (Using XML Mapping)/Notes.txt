@@ -1,0 +1,58 @@
+=> Steps to create Hibernate First Program :-
+    1. Download & Install any IDE (Eclipse)
+    2. Create "Simple Java Project" or "Maven Project"
+    3. Add "hibernate jars" (for java project) or "provide dependencies" (for maven project)
+    4. Create "POJO class"
+    5. Create "Hibernate Mapping File"
+    6. Create "Hibernate Configuration File"
+    7. Create main class to execute hibernate application with following steps :-
+
+        7.1 Create "Configuration" object :-
+            -> The Configuration class is used to configure and manage hibernate settings.
+            -> How to get Configuration object :-
+                ** Configuration cfg = new Configuration();
+            -> Methods of Configuration class :-
+                ** configure()  // It is used to load the hibernate configuration details from an external file.
+
+        7.2 Create "SessionFactory" object :-
+            -> SessionFactory is an interface that represents a factory for creating "Session" objects.
+            -> It is used to load the configuration details from configuration file, setting up
+            connection pool, manage database connections etc.
+            -> How to get SessionFactory object :-
+                ** SessionFactory sessionFactory = cfg.buildSessionFactory();
+
+        7.3 Create "Session" object :-
+            -> Session is an interface that represents a single unit of work.
+            -> It is used to perform database operations.
+            -> How to get Session object :-
+                ** Session session = sessionFactory.openSession();
+
+            -> Database operations that we can perform using Session object are :-
+                a. Insert operation
+                    = save()
+                    = persist()
+                b. Update operation
+                    = update()
+                    = saveOrUpdate()
+                c. Delete operation
+                    = delete()
+                d. Retrieve operation
+                    = get()
+                    = load()
+
+        7.4 Create "Transaction" object :-
+            -> Transaction is an interface that represents database transaction.
+            -> It is used to control and manage transactions.
+            -> How to get Transaction object :-
+                ** Transaction transaction = session.getTransaction()
+                   transaction.begin();
+                ** Transaction transaction = session.beginTransaction();
+
+            -> NOTE : In JDBC, AutoCommit default value is "true" and we have to set it to "false" by
+            "con.setAutoCommit(false);" statement. But in hibernate AutoCommit default value is "false".
+
+
+==> Dependencies:-
+
+1. Mysql Connector
+2. Hibernate Core
