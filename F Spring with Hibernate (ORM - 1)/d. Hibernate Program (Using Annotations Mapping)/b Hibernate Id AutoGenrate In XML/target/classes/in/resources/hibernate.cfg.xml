@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+
+	<session-factory>
+	
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<property name="hbm2ddl.auto">update</property>
+		
+		<!-- Dilect is used to tell which type of database we are using along with version -->
+		<property name="dilect">org.hibernate.dialect.MySQL8Dialect</property>
+		
+		<!-- "show_sql" is used to show sql query in console  -->
+		<property name="show_sql">true</property>
+		
+		<!-- "format_sql" is used to show sql query in format in console  -->
+		<property name="format_sql">true</property>
+		
+		<mapping resource ="/in/resources/student.hbm.xml" />
+		
+	
+	</session-factory>
+
+</hibernate-configuration>

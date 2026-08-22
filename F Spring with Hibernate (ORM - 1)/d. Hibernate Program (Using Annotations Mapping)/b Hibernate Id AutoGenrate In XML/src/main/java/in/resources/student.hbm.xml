@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+ 
+ 	<class name="in.beans.Student" table = "std_ragister">
+ 	
+ 		<id name="stdId" column="std_id">
+ 			<generator class="identity"></generator> <!--  It will autogenerate the id -->
+ 		</id>
+ 		<property name="name" column = "std_name" />
+ 		<property name="roll" column = "std_roll" />
+ 		<property name="email" column = "std_email" />
+ 		<property name="gender" column = "std_gender" />
+ 		<property name="city" column = "std_city" />
+ 	
+ 	</class>
+ 
+ 
+ </hibernate-mapping>

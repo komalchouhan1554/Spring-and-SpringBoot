@@ -1,0 +1,75 @@
+>> Annotations used in Hibernate
+---------------------------------
+
+=> @Entity :-
+    -> The @Entity annotation is used to mark the java class as an entity, indicating that instances of
+    this class will be mapped to rows in a database table.
+    -> When we annotate a class with @Entity, hibernate recognizes it as a persistent entity and we can
+    perform database operations (such as insert, update, delete etc) on instances of this class.
+    -> This annotation is used at the class level.
+
+    -> Syntax :-
+        @Entity
+        class ClassName
+        {
+            //class members
+        }
+
+=> @Table :-
+    -> This annotation is used to map the class with database table.
+    -> This annotation is used at the class level.
+
+    -> Syntax :-
+        @Entity
+        @Table(name = "table_name")
+        class ClassName
+        {
+            //class members
+        }
+
+=> @Id :-
+    -> @Id annotation is used to specify the primary key of an entity class. It marks a field as the
+    unique identifier for instances of that entity.
+    -> In relational database, a primary key uniquely identifies wach row in a table and hibernate uses
+    this annotation to map the java objects primary key to the database primary key.
+    -> This annotation is used with field (attribute) within the entity class.
+
+    -> Syntax :-
+        @Entity
+        @Table(name = "table_name")
+        class ClassName
+        {
+            @Id
+            private int empid;
+        }
+
+=> @Column :-
+    -> @Column is used to map the field with table column.
+    -> It is used with field (attribute).
+
+=> @Column :-
+    -> @Column is used to map the field with table column.
+    -> It is used with field (attribute) within the entity class.
+    
+    -> Syntax :-
+        @Entity
+        @Table(name = "table_name")
+        class ClassName
+        {
+            @Column(name = "column_name")
+            private String property_name;
+        }
+
+=====================================================================================================
+
+=> Code to generate id :-
+
+    -> Using XML :-
+        <id name="stdid" column="std_id">
+            <generator class="identity" />
+        </id>
+
+    -> Using Annotations :-
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+=====================================================================================================
