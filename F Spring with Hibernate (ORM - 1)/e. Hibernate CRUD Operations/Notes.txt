@@ -1,0 +1,33 @@
+=> Difference between save() and persist() method :-
+    = When save() method insert the record in database, it will return primary key of the saved object.
+        - Serializable save(Object object);
+    = When persist() method insert the record in database, it will not return any value.
+        - void persist(Object object);
+
+=====================================================================================================
+
+=> Difference between get() and load() method :-
+    -> get() method :-
+        = The get() method is used to retrieve an object from the database by its primary key (identifier).
+        = If the object with the given identifier is found in the database, it will return the actual
+        object and initializes all the properties with data from database. This is known as "eager
+        loading" or "early loading".
+        = If the object is not found in the database it will return null object.
+
+    -> load() method :-
+        = The load() method also retrieves an object by its primary key but it return a proxy object
+        rather than the actual object from the database.
+        = It will retrieve the values from database only when getter methods are called. This is known
+        as "lazy loading".
+        = If the object is not found in the database it provides an exception i.e. "ObjectNotFoundException".
+
+=====================================================================================================
+
+=> Difference between update() and saveOrUpdate() method :-
+    -> update() method will update the record if the row is present in database. If row is not present
+    in database then it will provide an exception.
+    -> saveOrUpdate() method is the combination of save() and update() method. It will check whether the
+    object is present in database, if it is present then it will update otherwise it will insert the
+    values or object in database.
+
+=====================================================================================================
