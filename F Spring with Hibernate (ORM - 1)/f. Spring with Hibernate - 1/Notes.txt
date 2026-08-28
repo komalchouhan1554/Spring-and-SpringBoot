@@ -1,0 +1,38 @@
+=> Spring with Hibernate :-
+    -> Spring with Hibernate combines the strength of both frameworks to create efficient, maintainable and scalable java application.
+    -> Using hibernate with spring will simplifies the configuration, enhances transaction management etc by removing the boiler-plate code i.e. creating Configuration, SessionFactory, Session & Transaction objects.
+
+    -> To achieve spring with hibernate integration, spring has provided 3 classes :-
+        1. LocalSessionFactoryBean
+        2. HibernateTransactionManager
+        3. HibernateTemplate
+
+-----------------------------------------------------------------------------
+
+=> LocalSessionFactoryBean :-
+    -> It is a class which simplifies the process of configuring hibernate within spring application
+    -> Use :-
+        = Configuration :-
+            - It allows us to define and configure hibernate properties such as database connection details, dialect, mapping resources etc in spring context file.
+        = SessionFactory creation :-
+            - It is responsible for creating and initializing the hibernate SessionFactory based on the provided configurations.
+            - The SessionFactory is a component in hibernate that manaes the lifecycle of database connections and provides a central point for creating and managing database transaction. By using LocalSessionFactoryBean, we can obtain a fully configured SessionFactory instance to work with hibernate in our spring application.
+
+=> HibernateTransactionManager :-
+    -> It is a class that provides an abstraction layer for database transactions when using hibernate as a persistence framework.
+    -> Use :-
+        = Transaction Management :-
+            - It simplifies hibernate transaction management, synchronizes hibernate session with spring-managed transactions, binding sessions to threads and managing their life cycle during commits and rollbacks.
+        = Declarative Transaction Management :-
+            - It also supports declarative transaction management via spring's "@Transactional" annotation which simplifies the code by automating transaction handling, enhancing readability and maintainability.
+
+=> HibernateTemplate :-
+    -> It is a class that provides a simplified and consistent way to interact with hibernate ORM framework.
+    -> Use :-
+        = Simplified Data Access :-
+            - It is an abstraction layer over hibernate "Session" which provides the methods for CRUD operations i.e. save(), update(), delete(), get() etc.
+            - It abstracts away the need to manually open and close hibernate sessions.
+        = Exception Translations :-
+            - It provides exception translation i.e. converting hibernate-specific exceptions into Spring's DataAccessException hierarchy.
+
+================================================================================================================================
