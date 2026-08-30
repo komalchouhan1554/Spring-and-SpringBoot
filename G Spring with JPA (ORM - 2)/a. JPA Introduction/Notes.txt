@@ -1,0 +1,61 @@
+=> Java Persistence API (JPA) :-
+    -> JPA was released in May 2006 as the part of JavaEE-5 (Enterprise Edition).
+    -> JPA is specification that simplifies the interaction between java "Objects" and "Relational Database".
+
+    -> NOTE :
+        = JPA is only specification, its implementation is provided by ORM vendors i.e. JBoss
+        (hibernate), Apache Software Foundation (Open JPA), Eclipse Foundation (EclipseLink) etc.
+        = To use JPA, we have to use any one ORM tool for eg. hibernate, EclipseLink etc.
+
+    -> Advantages of JPA :-
+        1. Abstraction over database :-
+            = JPA provides a higher-level, object-oriented way to interact with databases, allowing
+            developers to work with java objects rather than dealing with SQL queries and database-specific code.
+        2. Improves Productivity :-
+            = By using JPA, developers can focus on business-logic rather than database interaction,
+            leading to faster development and reduce the code complexity.
+        3. ORM (Object-Relational Mapping) :-
+            = JPA enables ORM which means it maps Java Objects to Database and vice versa. This
+            simplifies the storage and retrival of java objects in database eliminating the need to
+            write low-level SQL queries. JPA allows to developers to switch between different ORM vendors.
+        4. Database Portability :-
+            = JPA abstracts away the database-specific details, making it easier to switch between different databases.
+        5. Scalability :-
+            = JPA enables the development of scalable applications by managing database connections, pooling, optimizing performance etc.
+        etc.
+
+=====================================================================================================
+
+=> JDBC (Java Database Connectivity) :-
+    -> JDBC is an API which is used to store the data in database
+    -> JDBC is only specification, its implementation is provided by database vendors i.e. MySQL, Oracle, PostgreSQL etc.
+
+
+=> ORM (Object Relational Mapping) :-
+    -> ORM is programming approach or functionality used to provide the relationship between "Objects" and "Relational Database" by using xml mapping file or annotations.
+
+
+=> Hibernate :-
+    -> Hibernate is an ORM tool which is used to store the data/objects in database.
+    -> It follows ORM approach.
+
+
+=> JPA (Java Persistence API) :-
+    -> JPA is an API which is used to store the data in database (but it follows ORM approach).
+    -> JPA is only specification, its implementation is provided by ORM vendors i.e. JBoss (hibernate), Apache Software Foundation (Open JPA), Eclipse Foundation (EclipseLink) etc.
+
+=====================================================================================================
+
+=> What is specification ?
+    -> Specification means guidelines or blueprint for how a particular technology or API should work.
+    -> Specification means formal document that defines a set of rules, behaviour and interfaces that software application implements.
+
+=====================================================================================================
+
+=> Persisting an Entity :-
+    = Persistence means "store permanently"
+    = Entity means "objects"
+
+    -> Persisting an entity means "storing the object in database permanently".
+
+=====================================================================================================
