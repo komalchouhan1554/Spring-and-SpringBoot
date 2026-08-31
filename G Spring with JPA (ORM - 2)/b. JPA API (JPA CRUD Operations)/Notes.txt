@@ -1,0 +1,84 @@
+=> JPA is an API which contains interfaces and classes which are as follows :-
+    1. Persistence <class>
+    2. EntityManagerFactory <interface>
+    3. EntityManager <interface>
+    4. EntityTransaction <interface>
+
+    5. Query <interface>
+    6. TypedQuery <interface>
+
+    7. CriteriaBuilder <interface>
+    8. CriteriaQuery <interface>
+      etc
+
+=> NOTE :-
+    = All above classes and interfaces are present in "javax.persistence" package.
+    = The "Java Persistence API (JPA)" name has been changed or rebanded to "Jakarta Persistence API (JPA)" in 2019.
+
+=====================================================================================================
+
+=> Persistence <class> :-
+    -> It provides a static method i.e. createEntityManagerFactory() for obtaining EntityManagerFactory instances.
+
+=> EntityManagerFactory <interface> :-
+    -> It is used to create EntityManager instance for database operations.
+
+=> EntityManager <interface> :-
+    -> It manages the lifecycle of entities and provides methods for CRUD operations.
+
+
+=> EntityTransaction <interface> :-
+    -> It is used for transaction management including starting, committing and rolling back the transactions.
+
+=====================================================================================================
+
+=> Steps to create JPA first program :-
+    1. Download and Install any one IDE (eclipse).
+
+    2. Create "Simple Java Project" or "Maven Project".
+
+    3. Add "jars" (for simple java project) or "provide dependencies" (for maven project)
+        = javax.persistence-api.jar
+        = JPA provider jar (hibernate-core)
+        = JDBC Driver jar (mysql-connector jar)
+
+    4. Create POJO (Plain Old Java Object) class.
+
+    5. Create mapping file (or provide annotations in POJO class).
+
+    6. Create Persistence Unit Configuration (persistence.xml) in META-INF folder.
+
+    7. Create main class and execute the application
+
+        = Create EntityManagerFactory object :-
+            -> EntityManagerFactory emf = Persistence.createEntityManagerFactory("my-persistence-unit");
+        = Create EntityManager object :-
+            -> EntityManager em = emf.createEntityManager();
+        = Create EntityTransaction object and begin the transaction
+            -> EntityTransaction et = em.getTransaction();
+               et.begin();
+        = Perform database operations using EntityManager instance
+            -> Insert operation
+                = persist()
+            -> Retrieval operation :-
+                = find()
+            -> Update operation :-
+                = merge()
+            -> Delete operation :-
+                = remove()
+
+    8. Commit the transaction.
+
+    9. Close the resources.
+
+=> NOTE :-
+    -> All the above CRUD operation methods are used to work with individual record or to perform single
+    record manipulation only.
+    -> If we want to work with multiple records (perform manipulations with multiple records) like
+    select, insert, update, delete multiple records then we have to use :-
+        1. JPQL (Java Persistence Query Language)
+        2. Native SQL
+        3. JPA Criteria API (less used)
+
+=====================================================================================================
+
