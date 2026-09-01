@@ -1,0 +1,60 @@
+=> JPQL (Java Persistence Query Language) :-
+    -> JPQL is a query language used for querying and manipulating java objects with relational database.
+    -> It allows the developers to write the queries in an object-oriented way, treating database records as objects.
+
+    -> Some JPQL queries are as follows :-
+        1. Select query :-
+            = SELECT en FROM EntityName en
+            = SELECT en FROM EntityName en WHERE en.attribute = :value
+        2. Update query :-
+            = UPDATE EntityName en SET en.attribute = :newValue WHERE en.id = :entityId
+        3. Delete query :-
+            = DELETE FROM EntityName en WHERE en.id = :entityId;
+          etc
+
+    => NOTE :-
+        = There is no INSERT query in JPQL. If we have to insert new entity in database then we have to use EntityManager [persist()] or native SQL query.
+        = There are many other queries i.e. COUNT, JOIN, GROUP ID, ORDER BY, DISTINCT etc.
+        = Each JPQL query should be specific to a single entity.
+
+    => Why we should use JPQL :-
+        1. Advanced Quering :-
+            = If we want to use complex queries i.e. joins, aggregations etc then we can use JPQL (as standard CRUD operations are not suitable).
+        2. Improve Performance :-
+            = If we are fetching large datasets or executing complex queries then JPQL is used to improve the performance (as standard CRUD operations reduces the performance).
+        3. Aggregations :-
+            = JPQL can perform aggregation functions eg SUM, COUNT etc for reporting and analytics.
+        4. Type Safety :-
+            = JPQL provides type-safety which is helpful for catching the errors at compile time.
+        5. Other benifits :-
+            = JPQL provides more flexiblity, enabling custom queries and advanced filtering for a wider range of use case.
+          etc
+
+=====================================================================================================
+
+=> Query (Interface) :-
+    -> It is the fundamental JPA interface that represents a database query
+    -> It is used to execute dynamic queries including both JPQL and native SQL queries
+    -> It allows parametrization, result retrival and is used for various querying operations
+
+
+=> TypedQuery (Interface) :-
+    -> It is a specilized subtype of the Query interface of JPA
+    -> It enhances type safety by demanding us to specify the expected result type when creating a
+    query. This ensures that query results are automatically cast to the specified type, reducing the
+    risk of type-related errors.
+    -> It is useful when working with entity types in JPA as it eliminates the need for explicitly
+    casting when retrieving the results.
+
+=====================================================================================================
+
+=> Creating Persistent File
+
+- Create Folder : src/main/resources
+- Create Another Folder inside Above "src/main/resources" folder : META-INF
+- Now Create file : persistent.xml
+
+- How add Schema to persistent.xml file
+    = Search 'persistent.xml file schema' on browser.
+    = Click on oracle website then download : persistent_2_2.xsd
+    = Open the file and copy the schema & paste it into persistent.xml file
