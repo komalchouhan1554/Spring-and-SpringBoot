@@ -1,0 +1,33 @@
+=> Named Queries in JPA :-
+    -> Named queries in JPA are queries to which we assign a particular name, making them easier to reference and reuse throughout our application.
+    -> We can declare named queries in an entity class or in xml file.
+    -> Syntax :-
+        = In an entity class :-
+            @NamedQuery(name="queryName", query="----JPQL-----")
+            public class Student
+            {
+                //----
+            }
+
+        = In xml file (orm.xml)
+            <named-query name="queryName">
+                <query> ----JPQL----- </query>
+            </named-query>
+
+    -> NOTE :-
+        = Named queries in JPA are primarily used for selecting data (SELECT query).
+        These are not used for inserting, updating or deleting data (INSERT, UPDATE or DELETE queries).
+
+    -> Advantages of Named Queries :-
+        1. Code Reusability :-
+            = Named Queries can be reused in different parts of our application, reducing the code
+            duplication. This enhances the consitency and readability of our code.
+        2. Code Maintainability :-
+            = Named Queries centralize query definitions, making it easier to maintain and update
+            queries across our application. When a query needs modification, we can update it in one
+            place and all the references to that query will automatically updated.
+        3. Type Safety :-
+            = Named Queries are checked for correctness at compile time, which helps to catch the errors early in the development process.
+          etc
+
+=====================================================================================================
