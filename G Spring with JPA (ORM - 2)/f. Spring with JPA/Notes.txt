@@ -1,0 +1,42 @@
+=> Spring with JPA :-
+    -> Spring with JPA combines the power of the Spring Framework with the JPA to build robust and
+    maintainable java application.
+    -> It simplifies configurations, enhances transaction management and reduces the boilerplate code
+    for managing database interaction.
+
+    -> Key components for Spring with JPA :-
+        1. LocalContainerEntityManagerFactoryBean
+        2. JpaTransactionManager
+        3. @PersistenceContext
+
+-----------------------------------------------------------------------------
+
+=> LocalContainerEntityManagerFactoryBean :-
+    -> It is a class which is responsible for creating and confguring the EntityManagerFactory, which is the central interface for working with JPA.
+    -> It allows for easy setup of JPA providers like hibernate, eclipselink etc.
+
+
+=> JpaTransactionManager :-
+    -> It is a class which is used for managing transactions in spring-managed JPA environment.
+    -> It coordinates transactions across one or more EntityManager instances.
+
+
+=> @PersistenceContext :-
+    -> It is a JPA-specific annotation used in the JPA to inject EntityManager into spring-managed bean or components.
+
+=====================================================================================================
+
+=> Steps to create Spring with JPA program :-
+    1. Create maven project and provide dependencies.
+    2. Create an entity class in "in.sp.entity" package.
+    3. Create Spring configuration file (xml) in "in.sp.resources" package.
+        = DataSource -> DriverManagerDataSource
+        = LocalContainerEntityManagerFactoryBean
+            - dataSource
+            - package to scan the entity class
+            - jpa vendor properties
+    4. Create DAO interface in "in.sp.dao" package.
+    5. Create DAO implemented class in "in.sp.dao" package.
+    6. Create main class and execute the application.
+
+=====================================================================================================
