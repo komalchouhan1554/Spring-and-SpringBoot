@@ -1,0 +1,42 @@
+=> Spring Data Access :-
+    -> Spring Data Access is the part of spring framework which aims to simplifies data access in spring
+    applications by offering abstractions and tools for relational databases, NoSQL databases etc.
+    
+    -> Modules in Spring Data Access are :-
+        1. Spring Data JPA
+            = Focus on relational database access using JPA
+        2. Spring Data MongoDB
+            = Focus on NoSQL access using MongoDB
+        3. Spring Data Cassandra
+            = Focus on working with Apache Cassandra i.e. NoSQL database
+        4. Spring Data Redis
+            = Focus on caching and key-valye data storage in Redis
+        5. Spring Data Neo4j
+            = Focus on graph database access using Neo4j
+          etc
+
+=====================================================================================================
+
+=> Spring Data JPA :-
+    -> Spring Data JPA is the part of larger Spring Data Project which provides a simplified and
+    consistent way to work with JPA in spring-based application.
+
+    -> Spring Data JPA provides some "Repository Interfaces" which provides a convenient way to perform
+    common database operations without writing the actual database queries or boilerplate code.
+    -> Some Repository Interfaces present in Spring Data JPA are :-
+        1. Repository
+        2. CrudRepository
+        3. PagingAndSortingRepository
+        4. JpaRepository
+          etc
+
+    -> Hierarchy of Repository Interfaces :-
+        = diagram
+
+    -> All Spring Data JPA Repository Interfaces provides 2 types of methods :-
+        1. Core CRUD Operation Methods
+            = Used for basic data manipulation.
+        2. Query Methods
+            = Used to define custom queries using method naming conventions or custom JPQL/SQL queries.
+
+=====================================================================================================
