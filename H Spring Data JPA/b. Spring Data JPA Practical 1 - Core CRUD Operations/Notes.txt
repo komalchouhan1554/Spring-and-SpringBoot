@@ -1,0 +1,35 @@
+=> Core CRUD Operation Methods in Spring Data JPA Repository Interfaces are :-
+    -> Insert (Create) Operations :-
+        = save(S entity)
+        = saveAll(Iterable<S> entity)
+    -> Update Operations :-
+        = save(S entity)
+    -> Delete Operations :-
+        = delete(S entity)
+        = deleteAll(Iterable<? extends S> entities)
+        = deleteAll()
+        = deleteById(Id id)
+    -> Read (Retrieve) Operations :-
+        = findById(ID id)
+        = findAll()
+        = findAllById(Iterable<ID> ids)
+        = count()
+        = existsById(ID id)
+
+=====================================================================================================
+
+=> Steps to create Spring Data JPA program :-
+    1. Create Maven Project.
+    2. Provide dependencies.
+        = Spring Data JPA Dependency
+        = javax.persistence-api Dependency
+        = Hibernate Core Dependency
+        = Mysql-connector-j Dependency
+    3. Create entity class (Student.java)
+    4. Create custom repository interface (StudentRepository.java)
+    5. Create service class (StudentService.java)
+    6. Create Spring Configuration File (SpringConfigFile.java).
+        = DriverManagerDataSource (DataSource)
+        = LocalContainerEntityManagerFactoryBean
+        = JpaTransactionManager
+    7. Create main class and execute the program.
