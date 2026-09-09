@@ -1,0 +1,170 @@
+=> Query Methods :-
+    -> Query methods are the methods which are used to define database queries by simply declaring
+    method signatures in our repository interfaces. These methods are used to automatically generate SQL
+    queries based on the method names and parameters, reducing the need for writing custom SQL queries.
+    -> Query methods are defined in repository interfaces
+
+    -> Query methods are used to define custom queries using :-
+        = method naming conventions
+        = custom JPQL queries
+        = custom SQL queries
+
+    -> For eg :-
+        = Query Method : findByEmail(String email)
+        = Generated SQL query : SELECT * FROM table_name WHERE email=?;
+
+=====================================================================================================
+
+==>> Syntax for Query Methods Using Method Naming Conventions <<==
+
+1.  findBy{Property}(Type property)
+    = For example : findByEmail(String email)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_email = ?
+
+2.  findBy{Property}IgnoreCase(Type property)
+    = For example : findByEmailIgnoreCase(String email)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE LOWER(std_email) = LOWER(?)
+
+3.  findBy{Property1}And{Property2}(Type property1, Type property2)
+    = For example : findByNameAndEmail(String name, String email):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name = ? AND std_email = ?
+
+4.  findBy{Property1}Or{Property2}(Type property1, Type property2)
+    = For example : findByNameOrEmail(String name, String email)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name = ? OR std_email = ?
+
+5.  findBy{Property}GreaterThan(Type property)
+    = For example : findByMarksGreaterThan(float marks)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks > ?
+
+6.  findBy{Property}LessThan(Type property)
+    = For example : findByMarksLessThan(float marks):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks < ?
+
+7.  findBy{Property}GreaterThanEqual(Type property)
+    = For example : findByMarksGreaterThanEqual(float marks):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks >= ?
+
+8.  findBy{Property}LessThanEqual(Type property)
+    = For example : findByMarksLessThanEqual(float marks):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks <= ?
+
+9.  findBy{Property}Between(Type property)
+    = For example : findByMarksBetween(float minMarks, float maxMarks)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks BETWEEN ? AND ?
+
+10. findBy{Property}Not(Type property)
+    = For example : findByMarksNot(float marks)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks <> ?
+
+11. findBy{Property}Like(Type property)
+    = For example : findByNameLike(String name)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name LIKE ?
+
+12. findBy{Property}StartingWith(Type property)
+    = For example : findByNameStartingWith(String prefix)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name LIKE ?
+
+13. findBy{Property}EndingWith(Type property)
+    = For example : findByNameEndingWith(String suffix):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name LIKE ?
+
+14. findBy{Property}Containing(Type property)
+    = For example : findByNameContaining(String keyword)
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_name LIKE ?
+
+15. findFirstByOrderBy{Property}Asc()
+    = For example : findFirstByOrderByMarksAsc():
+    = Generated SQL Query: SELECT * FROM student_marks ORDER BY std_marks ASC LIMIT 1
+
+16. findFirstByOrderBy{Property}Desc()
+    = For example : findFirstByOrderByMarksDesc():
+    = Generated SQL Query: SELECT * FROM student_marks ORDER BY std_marks DESC LIMIT 1
+
+17. findTop{N}ByOrderBy{Property}Desc(Type property)
+    = For example : findTop5ByOrderByMarksDesc():
+    = Generated SQL Query: SELECT * FROM student_marks ORDER BY std_marks DESC LIMIT 5
+
+18. findTop{N}ByOrderBy{Property}Desc(Type property)
+    = For example : findTop10ByOrderByMarksDesc():
+    = Generated SQL Query: SELECT * FROM student_marks ORDER BY std_marks DESC LIMIT 10
+
+19. findBy{Property}In(List<Type> property)
+    = For example : findByEmailIn(List<String> emails):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_email IN (?)
+
+20. findBy{Property}IsNull()
+    = For example : findByEmailIsNull():
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_email IS NULL
+
+21. findBy{Property}IsNotNull()
+    = For example : findByEmailIsNotNull():
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_email IS NOT NULL
+
+22. findBy{Property1}BetweenOrderBy{Property2}Asc(Type property1, Type property2)
+    = For example : findByMarksBetweenOrderByMarksAsc(float minMarks, float maxMarks):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks BETWEEN ? AND ? ORDER BY std_marks ASC
+
+23. findBy{Property1}BetweenOrderBy{Property2}Desc(Type property1, Type property2)
+    = For example : findByMarksBetweenOrderByMarksDesc(float minMarks, float maxMarks):
+    = Generated SQL Query: SELECT * FROM student_marks WHERE std_marks BETWEEN ? AND ? ORDER BY std_marks DESC
+
+24. findDistinctBy{Property}(Type property)
+    = For example : findDistinctByName(String name):
+    = Generated SQL Query: SELECT DISTINCT * FROM student_marks WHERE std_name = ?
+
+25. find{EntityName}By{Property}(...)
+    = For example : findStudentByAgeGreaterThan(int age)
+    = Generates a custom query based on the method name.
+
+26. queryBy{Property}(...)
+    = For example : queryByAgeGreaterThan(int age)
+    = Generates a custom query based on the method name.
+
+27. countDistinctBy{Property}(Type property):
+    = For example : countDistinctByCity(String city)
+    = Generated SQL Query : SELECT COUNT(DISTINCT city) FROM tablename WHERE city = ?
+
+28. countBy{Property}(Type property)
+    = For example : countByActive(boolean active)
+    = Generated SQL Query : SELECT COUNT(*) FROM tablename WHERE active = ?
+
+29. deleteDistinctBy{Property}(Type property):
+    = For example : deleteDistinctByStatus(String status)
+    = Generated SQL Query : DELETE DISTINCT FROM tablename WHERE status = ?
+
+30. deleteBy{Property}(Type property)
+    = For example : deleteByStatus(String status)
+    = Generated SQL Query : DELETE FROM tablename WHERE status = ?
+
+31. deleteBy{Property1}And{Property2}(Type property1, Type property2):
+    = For example : deleteByStatusAndCategory(String status, String category)
+    = Generated SQL Query : DELETE FROM tablename WHERE status = ? AND category = ?
+
+32. removeBy{Property}(Type property)
+    = For example : removeByLastLoginBefore(Date date)
+    = Generated SQL Query : DELETE FROM tablename WHERE last_login < ?
+
+33. removeBy{Property1}Or{Property2}(Type property1, Type property2):
+    = For example : removeByStartDateAfterOrEndDateBefore(Date startDate, Date endDate)
+    = Generated SQL Query : DELETE FROM tablename WHERE start_date > ? OR end_date < ?
+
+34. removeBy{Property}Like(Type property):
+    = For example : removeByDescriptionLike(String keyword)
+    = Generated SQL Query : DELETE FROM tablename WHERE description LIKE '%keyword%'
+
+=====================================================================================================
+
+==>> Syntax for Query Methods Using Custom JPQL Queries <<==
+
+@Query("----JPQL Query----")
+ReturnType methodName(parameters);
+
+=====================================================================================================
+
+==>> Syntax for Query Methods Using Custom SQL Queries <<==
+
+@Query(value = "----SQL Query----", nativeQuery = true)
+ReturnType methodName(parameters);
+
+=====================================================================================================
