@@ -1,0 +1,25 @@
+=> Web Application :-
+    -> A web application is a type of software application that is accessed and used through a web browser over the network.
+    -> Advantages of web application :-
+        1. Platform Independent
+        2. No any other software installation required
+        3. Real-time updates
+        4. Responsive design
+          etc
+
+    -> Working of web application (in context of java) :-
+        = Diagram
+
+    -> Create simple java web application in eclipse :-
+        = steps
+
+    -> Web technologies in java :-
+        1. Servlet
+        2. JSP (Java Server Pages)
+        3. Frameworks
+            = Spring WEB Module (primarily used for back-end but can be used for front-end part also)
+            = Apache Struts (primarily used for front-end part)
+            = JSF (JavaServer Faces) (primarily used for front-end part)
+              etc
+
+=====================================================================================================
