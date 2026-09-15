@@ -1,0 +1,43 @@
+=> Hierarchy of HttpServlet :-
+    -> Diagram
+    -> NOTE : We commonly use HttpServlet abstract class because it provides HTTP methods.
+
+====================================================================================
+
+=> Servlet Life-Cycle :-
+    -> Below are the steps of Servlet Life-Cycle :-
+        1. Loading & Instantiation :-
+            = When the servlet is first requested or when the web application starts, the servlet class
+              is loaded in the servlet container and new instance of that servlet class is created.
+
+        2. Initialization :-
+            = After instantiation, the init() method is called by servlet container to initialize the servlet object.
+            = We can override the init() method to perform any one time setup operations for eg. loading
+              configuration data, establish database connection, initializing resources etc.
+
+        3. Request Handling :-
+            = Once the servlet is initialized, it is ready to handle the client requests
+            = The service() method is called by the container for each incoming HTTP request
+            = The service() method examines the request, determines the appropriate HTTP method (eg GET,
+              POST etc) and delegates the request to the corresponding doXXX() method (eg doGet(), doPost() etc).
+              
+        4. Response Generation :-
+            = During the request handling process, the servlet generates a response that may include HTML, XML, JSON etc.
+            = The response will be written to the HttpServletResponse object associated with the request.
+
+        5. Termination / Destruction :-
+            = When the servlet container decides to shut down the web application or unload the servlet,
+              it will call the destroy() method.
+            = The destroy() method allows us to perform cleanup operations for eg. closing the database
+              connections, releasing resources etc.
+
+        6. Servlet Deinstantiation :-
+            = After calling the destroy() method, the servlet container removes the servlet instance from memory.
+
+    -> NOTE :-
+        = Servlet life-cycle is managed by "Servlet Container".
+        = Servlet Loading, Servlet Instantiation and Servlet Initialization are executed only once.
+        = When the client sends the multiple requests, a new thread will be created which will be
+          associated with the request and every thread will execute service() method separately.
+
+====================================================================================
