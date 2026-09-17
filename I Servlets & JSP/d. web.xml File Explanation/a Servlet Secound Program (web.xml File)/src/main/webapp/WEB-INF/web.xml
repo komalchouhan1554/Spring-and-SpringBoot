@@ -1,0 +1,13 @@
+<web-app>
+	<servlet>
+		<servlet-name>ms</servlet-name>
+		<servlet-class>in.backend.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ms</servlet-name>
+		<url-pattern>/myser</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

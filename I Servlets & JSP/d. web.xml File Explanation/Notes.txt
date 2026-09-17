@@ -1,0 +1,38 @@
+=> "web.xml" File :-
+    -> To access any servlet from browser, we have to tell the servlet container that which servlet it
+    has to deploy and according to provided URL which servlet it has to invoke. For this purpose we use
+    "web.xml" file.
+    -> "web.xml" file is also known as "deployment descriptor file".
+
+    -> Responsibilities of web.xml file :-
+        1. Servlet configurations
+        2. JSP file configurations
+        3. Filters configurations
+        4. Listeners configurations
+        5. Initialization parameters configurations
+        6. Context parameters configurations
+        7. Session timeout configurations
+        8. Welcome file configurations
+        9. Error page configurations
+        10. Servlet load-on-startup configurations
+            etc
+
+    -> Syntax :-
+    <web-app>
+
+        <servlet>
+            <servlet-name> ms </servlet-name>
+            <servlet-class> package_name.MyServlet </servlet-class>
+        </servlet>
+        
+        <servlet-mapping>
+            <servlet-name> ms </servlet-name>
+            <url-pattern> /myser </url-pattern>
+        </servlet-mapping>
+    </web-app>
+
+    -> NOTE :-
+        = We create "web.xml" file in "WEB-INF" folder.
+        = In latest application, we normally use annotations. In legacy projects or in case of complex configurations we use "web.xml" file.
+
+====================================================================================
