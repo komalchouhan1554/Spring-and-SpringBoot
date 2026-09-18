@@ -1,0 +1,44 @@
+=> Annotations in Java :
+    -> Annotations are the metadata (information) which are added to the programming elements i.e.
+    class, interface, method, constructor, variable etc.
+    -> Annotations are used for configuration, documentation and to convey addition information at compile-time or runtime.
+    -> Annotations starts with '@'.
+    -> Categories of annotations :-
+        1. Marker Annotations
+            = It is used to mark a declaration. It does not contain any members or data
+            = For eg. @Override, @Depricated, @FunctionalInterface
+        2. Single Value Annotations
+            = In this annotations, there is only one member
+            = For eg. @SuppressWarnings("unchecked")
+        3. Full Annotations
+            = These annotations consists of multiple data members (name-value pair)
+            = For eg. @Bean(name="----", initMethod="-----", destroyMethod="----")
+
+====================================================================================
+
+=> Annotations in Servlet :
+    -> In java servlets, annotations are used to simplify the configuration of servlets and other
+    components in web application i.e. Filters, Listeners etc.
+    -> Annotations provides a way to declare various settings and behavior in the source code directly,
+    rather than configuring them in web.xml file. This makes our code more concise and easier to maintain.
+    -> Some commonly used annotations in servlet are :-
+        1. @WebServlet
+        2. @WebFilter
+        3. @WebListener
+        4. @WebInitParam
+        5. @MultipartConfig
+            etc
+
+    ----------------------------------------------------------
+
+=> @WebServlet :-
+    -> This is an annotation used to define a servlet. We can specify the servlet's name, URL pattern and other configuration settings within this annotation.
+    -> Syntax :-
+
+        @WebServlet(name="----", urlPatterns={----})
+        public class MyServlet extends HttpServlet
+        {
+            //override the methods
+        }
+
+====================================================================================
