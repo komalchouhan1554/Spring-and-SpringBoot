@@ -1,0 +1,63 @@
+=> HTTP (Hyper Text Transfer Protocol) :-
+    -> HTTP is a protocol (set of rules and regulation) that defines how data is transmitted and
+    formatted and how web servers and web browser should respond to various commands and requests.
+    -> In simple terms, HTTP is a protocol that enables us to request and receive web pages, images,
+    videos or any other resources when we browse the internet.
+
+=> HTTP Methods :-
+    -> HTTP methods are the commands or actions that indicate the desired action to be performed on a
+    resource identified by a URL. These methods define the operations we want to carry out on a server
+    then making an HTTP request.
+    -> Some HTTP methods are :-
+        1. GET
+        2. POST
+        3. PUT
+        4. DELETE
+        5. HEAD
+        6. OPTIONS
+        7. PATCH
+        8. TRACE
+            etc
+
+====================================================================================
+
+=> Difference between GET and POST :-
+    1. Purpose :-
+        = GET is used to retrieve the data from server. It does not perform any change at server side.
+        = POST is used to send data to the server for processing. It performs some changes at server side.
+
+    2. How data is transferred :-
+        = In case of GET, data is transferred to the server through URL.
+        = In case of POST, data is transferred to the server using request body.
+
+    3. Security :-
+        = GET is less secured because data is visible in the URL. Thus we should not use GET request in case of
+        sensitive data like password.
+        = POST is more secured because data is transferred through request body which is not visible. Thus we
+        can use POST request in case of sensitive data like password.
+
+    4. Amount of data :-
+        = We cannot send large amount of data using GET because it transfers the data using URL.
+        = We can send large amount of data (images, files, videos etc) using POST because it transfers the data
+        using request body.
+
+    5. Examples :-
+        = GET :-
+            - Fetching web pages
+            - Performing the search query
+                etc
+        = POST :-
+            - Submitting the form
+            - Uploading any file, images or videos
+            - Making payment through website
+                etc
+
+    6. Bookmarked :-
+        = GET request can be bookmarked.
+        = POST request cannot be bookmarked.
+
+    7. Caching :-
+        = GET requests can be cached by browsers and intermediary systems. This can improve the performance in some cases.
+        = POST requests cannot be cached.
+
+==============================================================================================================
