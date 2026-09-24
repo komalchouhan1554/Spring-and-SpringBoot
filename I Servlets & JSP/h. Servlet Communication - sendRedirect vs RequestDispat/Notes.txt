@@ -1,0 +1,49 @@
+=> Servlet Communication :-
+    -> It is the process by which servlet communicates with others i.e. browsers, web components (html, servlet, JSP etc) etc.
+    -> Types of Servlet Communication :-
+        1. Servlet Communication with Browser
+            -> Direct communication : Interacting with the browser directly.
+        2. Servlet Communication with Web Components
+            -> Indirect communication : Facilitating the communication between web components i.e. HTML, servlet, JSP etc.
+
+    --------------------------------------------------------------------------
+
+=> Servlet Communication with Browser :-
+    -> Servlet can communicate with browser by 3 ways :-
+        1. Through request-response objects.
+        2. Through sendError() method of HttpServletResponse.
+        3. Request redirection
+            3.1 Request redirection by hyperlinks.
+            3.2 Request redirection by setting header methods (setStatus() & setHeader()).
+            3.3 Request redirection by using sendRedirect() method of HttpServletResponse.
+
+    --------------------------------------------------------------------------
+
+=> Servlet Communication with Web Components :-
+    -> Servlet can communicate with web components by 2 ways :-
+        1. Using forward() method
+        2. Using include() method
+
+    -> NOTE : forward() and include() method are present in "RequestDispatcher" interface.
+
+--------------------------------------------------------------------------
+
+=> NOTE :
+    = Request redirection is used for external application redirection but forward() and include() are used for internal application redirection.
+
+====================================================================================
+
+=> What is difference between sendRedirect() and RequestDispatcher :-
+    1. sendRedirect() is used for external request redirection.
+       RequestDispatcher is used for internal request redirection.
+
+    2. sendRedirect() redirects the request to a different application or URL.
+       RequestDispatcher is used to forward or include the request to the same application or URL.
+
+    3. sendRedirect() is the method of HttpServletResponse.
+       RequestDispatcher has 2 methods i.e. forward() and include().
+
+    4. sendRedirect() will change the URL on the browser.
+       RequestDispatcher does not change the URL on the browser.
+
+====================================================================================
