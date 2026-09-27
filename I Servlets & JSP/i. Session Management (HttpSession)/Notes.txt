@@ -1,0 +1,85 @@
+=> HTTP (Hypertext Trasfer Protocol) :-
+    -> It is fundamental protocol for communication over the network. It enables data exchange between client and server.
+    -> NOTE :-
+        = HTTP is text-based protocol and it operates over the TCP/IP network.
+        = HTTP is stateless protocol. It means that server is not able to judge whether the request is coming
+        from single client or multiple client.
+
+=> Session :-
+    -> It is a period during which a client interacts with the server.
+    -> It keeps the track of user's action, state and data during this time.
+
+=> What is "State" and "Data" :-
+    -> State :-
+        = State refers to the ability to maintain information about a client's interaction with the server over
+        multiple HTTP requests. It allows us to remember the client's identity and track their action across
+        different pages or requests.
+
+        = For example :-
+            1. User Authentication State :
+                - Whether the user is logged in or logged out
+            2. Shopping Cart State :-
+                - Whether the user added some items to cart or not
+            3. Form Progress State :-
+                - When a user fills out a multiple-step form, the step we are currently on, along with the data we
+                have entered is the part of state. This allows us to resume where we left off.
+            4. Game Progress State :-
+                - In online games, the level or stage a player has reached is the part of state.
+            5. Video Playback State :-
+                - In video streaming services, the user's progress in a video (i.e. where we have stopped watching or
+                any bookmarks we have added) represents the state.
+                etc.
+    -> Data :-
+        = Data refers to the users information that has been tracked.
+        = For example :-
+            1. User Profile Data :-
+                - User specific details i.e. name, email, profile pic etc.
+            2. Shopping Cart Data :-
+                - The details of items in shopping cart i.e. item name, item price, item quantity etc.
+            3. Session History Data :-
+                - A record of users recent interactions i.e. browsing history, search queries, viewing products etc.
+            4. Form Input Data :-
+                - Data entered by the user in web form during their session.
+            5. User Preferences Data :-
+                - Specific settings and preferences choosed by the user i.e. saved address, saved payment modes etc.
+
+====================================================================================
+
+=> Session Management :-
+    -> Session Management is the process of maintaining the state and data for individual users during their
+    interaction with the server (web application).
+    -> We can achieve session management by "HttpSession Objects" (In conjection with session tracking mechanisms like
+    cookies, URL rewriting, hidden form fields etc).
+
+=> Session Tracking Mechanism :-
+    -> It is the technique by which server tracks whether the request is coming from one client or not.
+    -> We can achieve it by :-
+        1. Cookies
+        2. URL Rewriting
+        3. Hidden Form Fields
+            etc.
+
+====================================================================================================================
+
+=> HttpSession :-
+    -> HttpSession is an interface provided in Java Servlet API.
+    -> It's implementation is provided by the "web containers" for eg Apache Tomcat etc.
+    -> While it is referred as an interface, it is used to represent an object that provides the session management in servlet-based applications.
+
+=> HttpSession Object :-
+    -> How to create/get HttpSession Object :-
+        1. public HttpSession getSession()
+        2. public HttpSession getSession(boolean b)
+            (Above methods are present in "HttpServletRequest" interface)
+
+    -> How to handle the data in HttpSession Object :-
+        1. public void setAttribute(String name, Object value)
+        2. public Object getAttribute(String name)
+        3. public Enumeration getAttributeNames()
+        4. public void removeAttributes(String name)
+
+    -> How to destroy the HttpSession Object :-
+        1. public void invalidate()
+        2. public void setMaxInactiveInterval(int time)
+
+====================================================================================
