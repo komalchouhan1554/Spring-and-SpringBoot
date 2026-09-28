@@ -1,0 +1,9 @@
+=> Internal working of Session Management :-
+    -> When we achieve Session Management using HttpSession, internally cookies (Session Tracking Mechanism) are used.
+    -> But there is one disadvantage of cookies i.e. client can disable the cookies in browser.
+
+    -> In case of session management, we container creates one session id i.e. JSESSIONID. 
+    This JSESSIONID is transferred from client to server in request header body.
+    This JSESSIONID is matched by web container and it get to know that the client is new or old.
+
+=============================================================================================================================
