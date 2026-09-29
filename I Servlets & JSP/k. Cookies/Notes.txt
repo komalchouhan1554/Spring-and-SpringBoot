@@ -1,0 +1,77 @@
+=> Cookie :-
+    -> Cookie is a small piece of data (object) that is stored on the client side i.e browser and sent back to the server with each subsequent request.
+    -> Cookie stores the data in "name-value" pair, for eg.
+        = Expires : Sat, 01 Jan 2025 00:00:00 GMT
+        = Secure : true
+        = HttpOnly : true
+
+    -> There are 2 types of cookies :-
+        1. Temporary Cookie (Session Cookie)
+            = These cookies are available for the duration of user's browser session. When the user closes their browser, temporary cookies gets deleted.
+            = These cookies are stored in browser's memory (RAM).
+        2. Permanent Cookie (Persistent Cookie)
+            = These cookies are available till their expiration date even when the user closes the browser.
+            = These cookies are stored in the file on user's computer i.e. hard disk.
+
+    -> Use of cookies :-
+        1. Session Management
+        2. Remember Me / Login Credentials
+        3. Add to cart in shopping application
+        4. Language preferences
+            etc
+
+    -> Advantages of cookies :-
+        1. It is the simplest way to achieve session tracking mechanism.
+        2. It is managed at client side.
+
+    -> Disadvantages of cookies :-
+        1. If the cookies are disabled at client side then session tracking mechanism will not work.
+        2. Cookies are not much secured.
+        3. We can store only textual information in cookies.
+
+====================================================================================
+
+=> To implement cookies in servlet we have one class i.e. "Cookie".
+
+=> Cookie :-
+    -> Cookie is the class which is present in "javax.servlet.http" package ("jakarta.servlet.http" for newer version).
+
+    -> Cookie has one constructor i.e.
+        = Cookie(String name, String value)
+
+    -> How to add cookie in response object :-
+        = public void addCookie(Cookie c)
+          (This method is present in HttpServletResponse interface)
+
+    -> How to get cookie from request object :-
+        = public Cookie[] getCookies()
+          (This method is present in HttpServletRequest interface)
+
+------------------------------------------------------------------------------------------------------------------------
+
+    -> Methods of Cookie class :-
+        1. Get name and value from cookie :-
+            = public String getName()
+            = public String getValue()
+
+        2. Cookie age or expiry date :-
+            = public void setMaxAge(int sec)
+            = public int getMaxAge()
+
+        3. Comments related methods for cookies :-
+            = public void setComment(String comment)
+            = public String getComment()
+
+        4. Version number related methods for cookies :-
+            = public void setVersion(int version_no)
+            = public int getVersion()
+
+        5. Domain name related methods for cookies :-
+            = public void setDomain(String domain_name)
+            = public String getDomain()
+
+        6. To specify path information to cookies :-
+            = public void setPath(String path)
+            = public String getPath()
+
+====================================================================================
