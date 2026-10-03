@@ -1,0 +1,45 @@
+=> URL-Rewriting :-
+    -> URL-Rewriting is the technique which is used to modify or enhance the URL's by adding query parameters or any other information to them.
+    -> This technique allows web developers to pass the data between web pages and maintain state across multiple HTTP requests.
+
+    -> Uses of URL-Rewritting :-
+        1. Session Tracking Mechanism
+        2. Passing Query Parameters
+
+    --------------------------------------------------------------------------
+
+=> Session Tracking Mechanism :-
+    -> For session tracking mechanism web containers makes the use of cookies (JSESSIONID). If the client disables the
+    cookies at browser then HttpSession and cookies will not work.
+
+    -> In that case we have to use URL-Rewriting session tracking mechanism.
+
+    -> In URL-Rewriting we modify the provided URL by attaching JSESSIONID at the end of URL.
+
+    -> For this HttpServletResponse interface has provided methods :-
+        1. public String encodeURL(String url)
+            = This method will attach JSESSIONID at the end of specified URL.
+            = If the cookies are enabled, then it will return the URL unchanged.
+        2. public String encodeRedirectURL(String url)
+            = This method will work same as above method i.e. it will also attach the JSESSIONID at the end of provided URL.
+            = This method works with sendRedirect() method.
+
+    -> NOTE :-
+        1. By default wen container will try to use cookie session tracking mechanism but if the cookies are disabled
+        at the client side (browser) then automatically URL-Rewriting session tracking mechanism will come into work
+        2. Mostly, we can use URL-Rewriting in case of dynamic web pages (servlets, JSP etc) and not for static web pages (html).
+        3. URL-Rewriting is automatically handled by web-container, we only need to encode the URL
+        4. JSESSIONID is automatically added in the URL but we can add the JSESSIONID manually by passing query parameters.
+
+--------------------------------------------------------------------------
+
+=> Passing Query Parameters :-
+    -> URL-Rewritting is also used to pass query parameters and data within the URL's.
+    -> This is used to transfer the information or data from one page to another.
+    -> Syntax :-
+       URL ? parameter1=value1 & parameter2=value2 & ____
+
+    -> NOTE :
+        = Do not send the sensitive data using query parameters.
+
+====================================================================================
