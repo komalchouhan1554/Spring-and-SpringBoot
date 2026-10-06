@@ -1,0 +1,20 @@
+=> Hidden Form Fields :-
+    -> Hidden form field is a specific type of HTML form field that is used to store the data on client side (browser) while keeping the data hidden from user.
+    -> It is used to pass the data from one page to another or from browser to server without displaying the data to the user.
+
+    -> Syntax :-
+        <input type="hidden" name="----" value="----" />
+
+    -> Uses of hidden form field :-
+        1. Session tracking mechanism
+        2. Passing data between pages
+        3. Secutiry tokens
+        4. Storing user preferences
+        5. URL redirection
+            etc
+
+    -> NOTE :-
+        = Hidden form fields are not suitable for storing sensitive and confidential information as data is visible in
+        the page source code and can be manipulated by the user.
+
+====================================================================================
