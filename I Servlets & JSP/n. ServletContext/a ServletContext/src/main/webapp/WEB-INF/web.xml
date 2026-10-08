@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<context-param>
+		<param-name>name1</param-name>
+		<param-value>vishal</param-value>
+	</context-param>
+
+</web-app>
