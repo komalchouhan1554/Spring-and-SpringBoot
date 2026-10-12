@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>ms</servlet-name>
+		<servlet-class>in.backend.MyServlet</servlet-class>
+		<init-param>
+			<param-name>name1</param-name>
+			<param-value>Vishal Jadhav</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ms</servlet-name>
+		<url-pattern>/myservlet</url-pattern>
+	</servlet-mapping>
+</web-app>

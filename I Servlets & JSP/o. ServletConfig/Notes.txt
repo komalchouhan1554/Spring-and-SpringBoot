@@ -1,0 +1,70 @@
+=> ServletConfig :-
+    -> ServletConfig is an interface provided by the Java Servlet API.
+    -> Syntax :-
+        public interface ServletConfig
+        {
+            //methods
+            public String getInitParameter(String name);
+            public Enumeration getInitParameterNames();
+
+            public ServletContext getServletContext();
+            public String getServletName();
+        }
+
+    -> ServletConfig is used to provide the configuration information to the servlet.
+    -> The variable which we are going to change after some time, that we can provide in ServletConfig object so that
+    we don't need to recompile our servlet page.
+
+    -> Points to note :-
+        = When the ServletConfig object is created :-
+            >> ServletConfig object is created after Servlet Instantiation and just before the Servlet Initialization phase.
+
+        = When the ServletConfig object is destroyed :-
+            >> ServletConfig object is destroyed just before the Servlet Deinstantiation phase.
+
+        = Lifetime of ServletConfig object :-
+            >> The lifetime of ServletConfig object is approx same as Servlet Object.
+
+        = Scope of ServletConfig object :-
+            >> The scope of ServletConfig is only to one particular servlet.
+
+        = Which type of data we can store in ServletConfig object :-
+            >> It can store only parameters data but not the attributes data.
+
+    -> How to get ServletConfig object :-
+        1. By using getServletConfig() method of Servlet interface
+            >> ServletConfig config = getServletConfig();
+        2. By overriding the init(ServletConfig config) method
+            >> public class Test extends HttpServlet
+                {
+                    ServletConfig config;
+
+                    @Override
+                    public void init(ServletConfig config)
+                    {
+                        this.config=config;
+                    }
+                }
+
+    -> How to store data in ServletConfig object :-
+        1. Using web.xml file
+            <web-app>
+                <servlet>
+                    <servlet-name> ---- </servlet-name>
+                    <servlet-class> ---- </servlet-class>
+                    <init-param>
+                        <param-name> ---- </param-name>
+                        <param-value> ---- </param-value>
+                    </init-param>
+                </servlet>
+                <servlet-mapping>
+                    <servlet-name> ---- </servlet-name>
+                    <url-pattern> ---- </url-pattern>
+                </servlet-mapping>
+            </web-app>
+        2. Using Annotations (@WebInitParam)
+
+    -> How to get data from ServletConfig object :-
+        = We can use below methods :-
+            >> public String getInitParameter(String name);
+            >> public Enumeration getInitParameterNames();
