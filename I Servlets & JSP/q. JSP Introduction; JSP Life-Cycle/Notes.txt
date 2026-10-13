@@ -1,0 +1,92 @@
+=> Static Web Pages :-
+    -> Static web pages are pre-built and do not change the content unless manually edited by web developer.
+    -> Static web pages are created in HTML, CSS etc.
+    -> Static pages are fast to load because there is no server-side processing involved.
+    -> Examples :-
+        - home pages
+        - login and register pages
+        - portfolio pages
+        - website information pages
+            etc
+
+=> Dynamic Web Pages :-
+    -> Dynamic web pages change their content based on the user-input or database updates or external factors.
+    -> Dynamic web pages are created in Servlets, JSP, Spring, PHP, Python etc.
+    -> Dynamic web pages are more versatile but may take longer time to load due to server-side processing.
+    -> Examples :-
+        - Profile pages
+        - Social networking websites home pages
+        - Shopping web pages
+            etc
+
+====================================================================================
+
+=> JSP (Java Server Pages) :-
+    -> JSP is server side technology which is used to create dynamic web pages.
+    -> Using JSP technology, we can embed Java code into HTML code.
+
+    -> JSP is an advanced version of servlet technology.
+        = In servlets we embed HTML code within Java code.
+        = In JSP we embed Java code within HTML code.
+
+    -> What is difference between Servlet & JSP :-
+        1. Servlet is a java code.
+           JSP is the HTML-based code.
+
+        2. It is hard to write code in servlets.
+           It's easier to write code in JSP.
+
+        3. Servlets are fast as compared to JSP.
+           JSP are slower as compared to servlets because it takes time to convert into servlet and compile the servlet.
+
+        4. In MVC architecture, servlets work as a controller.
+           In MVC architecture, JSP works as a view to display the output.
+
+        5. Modification in servlet file is time consuming due to reloading, recompilation and restarting the server.
+           Modification in JSP is fast as just we need to click refresh button.
+
+    -> Features of JSP :-
+        1. Simplified Development
+            = JSP simplifies web development by combining Java and HTML for dynamic web pages.
+        2. Built-in Tags :-
+            = JSP includes built-in tags like scriptlet tag, action tags, custom tags to streamline coding.
+        3. Easy Maintenance :-
+            = JSP promotes maintainability, flexibility and portability.
+        4. No Recompilation :-
+            = Changes to JSP page doesnt require recompilation and redeployment.
+        5. Extention to servlet :-
+            = JSP is an extension of servlet technology for easier web app development
+
+    -> How to create JSP pages :-
+        1. Create a text file with .jsp extension.
+        2. Write HTML code for page structure.
+        3. Embed Java code to generate dynamic content by using tags i.e. <%----=%> or <jsp:----> etc.
+
+    -> NOTE :-
+        1. JSP pages should be created in webapp folder.
+        2. We can also create jsp pages in WEB-INF folder but when we want to access jsp page then we have to provide.
+        the mapping in web.xml file because WEB-INF folder is private.
+
+====================================================================================================================
+
+=> JSP Life Cycle :-
+    1. JSP Loading:
+        = The JSP page is loaded into the server
+    2. JSP Parsing:
+        = The JSP container parses the JSP page to identify Java code
+    3. JSP Translation:
+        = The JSP page is translated into servlet page
+    4. Servlet Compilation:
+        = The java servlet source code is compiled
+    5. Servlet Loading:
+        = The compiled servlet class is loaded
+    6. Servlet Instantiation:
+        = An instance of servlet is create
+    7. Servlet Initialization:
+        = The servlet object is initialized
+    8. Servlet Processing:
+        = The servlet handles the client requests
+    9. Servlet Destruction:
+        = The servlet is destroyed dusring undeployment or server shutdown
+
+====================================================================================
