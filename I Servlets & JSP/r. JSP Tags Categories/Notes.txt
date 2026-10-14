@@ -1,0 +1,20 @@
+=> JSP Tags :-
+    -> JSP tags are special elements or directives used within the JSP document to embed Java code, perform actions or
+    define custom behaviors.
+    -> JSP tags allow us to mix dynamic java code with static HTML content making it easier to create dynamic web pages.
+
+    -> There are 3 types of JSP tags :-
+        1. JSP Scripting Tags
+        2. JSP Directive Tags
+        3. JSP Action Tags
+
+    -> NOTE :-
+        = There are many other libraries and tags that we can use in JSP to provide some additional functionalities i.e.
+            - JSTL (JSP Standard Tag Library)
+            - Spring MVC Tags
+            - Struts Tags
+            - JavaServer Faces (JSF) Tags
+                etc
+        = These tags can be used within the JSP using Taglib Directive Tag or Custom Action Tag.
+
+======================================================================================================
