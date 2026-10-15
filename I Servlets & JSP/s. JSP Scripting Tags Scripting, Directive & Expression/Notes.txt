@@ -1,0 +1,32 @@
+=> JSP Scripting Tags :-
+    -> These tags are used to embed Java Code into JSP Page.
+    -> There are 3 types of JSP Scripting Tags :-
+        1. Declaration Tag
+        2. Scriptlet Tag
+        3. Expression Tag
+
+====================================================================================
+
+=> Declaration Tag :-
+    -> This tag is used to declare variables or methods or classes or interfaces.
+    -> Syntax :-
+        <%! ----variables, methods, classes, interfaces declaration---- %>
+    -> If we declare variables or methods then they will be of instance or class level.
+
+=> Scriptlet Tag :-
+    -> It is used to execute java source code in JSP.
+    -> Syntax :-
+        <% ----java code---- %>
+    -> Whatever code we provide in scriptlet tag will be provided in _jspService() method.
+    -> NOTE :
+        = It's important to note that embedding too much java code in JSP can lead to less maintanable and less
+        readable code. It's often recommended to use JavaBean or Servlets for complex business logic and keep JSP page
+        for presentation (view).
+
+=> Expression Tag :-
+    -> It is used to print the values of variables or method calls directly to the output stream.
+    -> Syntax :-
+        <%= ----variables or method calls---- %>
+    -> The code placed within JSP expression tag will be written to the output stream of response and thus we don't need to use out.println() to write the data.
+
+====================================================================================
