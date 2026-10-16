@@ -1,0 +1,54 @@
+=> JSP Directive Tags :-
+    -> JSP directive tags are used to provide the instructions or directives to the JSP container on how to handle the
+    JSP page during compilation and execution.
+    -> Syntax :-
+        <%@ directive attribute="value" %>
+
+    -> There are 3 types of JSP directive tags :-
+        1. Page Directive Tag
+        2. Include Directive Tag
+        3. Taglib Directive Tag
+
+--------------------------------------------------------------------------
+
+=> Page Directive Tag :-
+    -> It is used to define various properties and settings for the current JSP page.
+    -> Syntax :-
+        <%@ page attribute="value" - - %>
+
+    -> Attributes in page directive tag :-
+        1. import
+        2. extends
+        3. langauge
+        4. contextType
+        5. session
+        6. isElIgnored
+        7. errorPage
+        8. isErrorPage
+            etc
+
+--------------------------------------------------------------------------
+
+=> Include Directive Tag :-
+    -> It is used to include the other JSP page content into current JSP page.
+    -> Syntax :-
+        <%@ include file="otherpage.jsp" %>
+
+    -> Advantages :-
+        1. Code Reusability
+        2. Improves the project readability
+        3. Maintainability (modifications is easy)
+
+--------------------------------------------------------------------------
+
+=> Taglib Directive Tag :-
+    -> It is used to make available user-defined or pre-defined tag libraries in the current JSP page.
+    -> Syntax :-
+        <%@ taglib uri="----" prefix="----" %>
+
+    -> For example :-
+        <%@ taglib uri="https://example.com/mytags" prefix="mytag" %>
+
+        <mytag:myCustomTag attribute="value" - - %>
+
+====================================================================================
