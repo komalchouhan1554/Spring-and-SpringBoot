@@ -1,0 +1,73 @@
+=> JSP Action Tags :-
+    -> The main purpose of JSP Action tags is to reduce the java code from JSP page.
+    -> They are often used to perform dynamic actions i.e. making decisions, iterating over collections etc without
+    embedding the java code directly into JSP page.
+    -> NOTE :-
+        = JSP Action Tags are mostly used in place of "Scriptlet Tag"
+        = It helps to separate the business layer from presentation layer in JSP page improving code organization and readability.
+
+    -> Syntax :-
+        <jsp:actionName ---- >
+
+    -> Types of Action tags :-
+        1. Standard Action Tag
+        2. Custom Action Tag
+
+--------------------------------------------------------------------------
+
+=> Standard Action Tag :-
+    -> These are built-in JSP action tags provided by JSP specifications.
+    -> These tags are used to perform common tasks without writing java code directly in our JSP page.
+    -> Examples :-
+        (Bean related tags)
+        1. <jsp:useBean>
+        2. <jsp:setProperty>
+        3. <jsp:getProperty>
+
+        (Control flow tags)
+        4. <jsp:include>
+        5. <jsp:forward>
+        6. <jsp:param>
+
+        (Scripting elements/tags)
+        7. <jsp:declaration>
+        8. <jsp:scriptlet>
+        9. <jsp:expression>
+
+        (Applets related tags)
+        10. <jsp:plugin>
+        11. <jsp:fallback>
+        12. <jsp:params>
+
+--------------------------------------------------------------------------
+
+=> Custom Action Tag :-
+    -> Already many standard action tags are created but sometimes we need to create our own action tags, then we can
+    use custom action tag.
+    
+    -> Advantages of custom action tag :-
+        1. It eliminates the need of scriptlet tag.
+        2. It separates the business layer from presentation layer.
+        3. Reusability of the code increase.
+
+    -> Syntax :-
+        <prefix:tagname attribute="value" - - />
+                    OR
+        <prefix:tagname attribute="value" - ->
+            //body
+        </prefix:tagname>
+
+====================================================================================
+
+=> What is difference between Include Directive Tag and JSP Action include Tag (<jsp:include>)
+
+    1. Include Directive Tag is used for static pages
+       Action include Tag is used for dynamic pages
+
+    2. Include Directive Tag includes the content of the target resource
+       Action include Tag includes the target response in the present JSP page
+
+    3. Include Directive Tag is evaluated at translation time
+       Action include Tag is evaluated at request processing time
+
+====================================================================================
