@@ -1,0 +1,16 @@
+=> JSP Implicit Objects :-
+    -> JSP implicit objects are pre-defined objects that are automatically available for use in our JSP pages without
+    the need to explicitly declare or instantiate them
+    -> These objects are created by JSP container
+    -> There are total 9 implicit objects in JSP :-
+        1. out              - JspWriter <class>
+        2. request          - HttpServletRequest <interface>
+        3. response         - HttpServletResponse <interface>
+        4. session          - HttpSession <interface>
+        5. application      - ServletContext <interface>
+        6. config           - ServletConfig <interface>
+        7. pageContext      - PageContext <class>
+        8. page             - Object <refers to the JSP page itself>
+        9. exception        - Throwable <class>
+
+====================================================================================
