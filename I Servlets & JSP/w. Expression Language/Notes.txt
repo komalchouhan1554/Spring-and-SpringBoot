@@ -1,0 +1,27 @@
+=> Expression Language (EL) :-
+    -> It is a scripting language used in web development commonly associated with JSP and Java EE applications.
+    -> It is used to access and manipulate data stored in java objects i.e. JavaBeans, request, session, application etc.
+    -> It is designed to simplify the process of integrating dynamic data into our web page.
+    -> It was introduced in JSP 2.0 version.
+
+    -> Syntax :-
+        ${expression}
+
+    -> EL contains various elements which are as follows :-
+        = Operators
+            +, -, *, /, ==, !=, &&, ||, [], () etc
+
+        = Reserved Words
+            true, false, null, empty, eq (equal), ne (not equal), lt (less than), le (less than or equal to), gt (greater than), ge (greater than or equal to) etc.
+
+        = Implicit Objects
+            - pageScope
+            - requestScope
+            - sessionScope
+            - applicationScope
+            - param
+            - paramValues
+            - pageContext
+                etc
+
+=======================================================================================================================
