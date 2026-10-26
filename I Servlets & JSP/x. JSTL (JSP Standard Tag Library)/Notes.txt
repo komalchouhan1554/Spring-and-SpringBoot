@@ -1,0 +1,65 @@
+=> JSTL (JSP Standard Tag Library) :-
+    -> JSTL is a standard library for JSP which was developed by Java Community Process (JCP).
+    -> JSTL is a collection of tags designed to simplify and enhance the JSP development.
+
+    -> There are total 5 types of JSTL tags :-
+        1. Core Tags
+        2. XML tags
+        3. Formatted Tags
+        4. SQL Tags
+        5. Function Tags
+
+    -> NOTE :-
+        = Most commonly used JSTL tags are "Core Tags".
+        = If we want to use JSTL tags in our project then we have to add one jar file i.e. jstl.jar
+
+    -> To use JSTL tags, we have to use taglib directive tags.
+        <%@ taglib uri="----" prefix="----" %>
+
+--------------------------------------------------------------------------------------
+
+=> Core Tags :-
+    -> These tags are commonly used for tasks like control statements, looping, variable manipulation & outputting content.
+    -> To use core tags in JSP we have to include taglib directive tag as below :-
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+    -> In core tags we have approx 14 tags :-
+        1. General Purpose Tags :-
+            <c:set>, <c:out>, <c:remove>, <c:catch>
+        2. Conditional Tags :-
+            <c:if>, <c:choose>, <c:when>, <c:otherwise> (last 3 tags are similar to switch statement)
+        3. Iterative Tags :-
+            <c:forEach>, <c:forTokens>
+        4. URL Based Tags :-
+            <c:url>, <c:import>, <c:redirect>
+
+--------------------------------------------------------------------------------------
+
+=> XML tags :-
+    -> These tags are used to work with XML data within JSP page.
+    -> To use XML tags in JSP we have to include taglib directive tag as below :-
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x" %>
+
+--------------------------------------------------------------------------------------
+
+=> Formatted Tags :-
+    -> These tags are used for internationalization and localization including formatting dates, numbers and currencies.
+    -> To use Formatted tags in JSP we have to include taglib directive tag as below :-
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+--------------------------------------------------------------------------------------
+
+=> SQL Tags :-
+    -> These tags are used for database operations but it is recommended to use other technologies like JDBC for
+    database access due to security concerns.
+    -> To use SQL tags in JSP we have to include taglib directive tag as below :-
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+
+--------------------------------------------------------------------------------------
+
+=> Function Tags :-
+    -> These tags are used to call functions for various tasks in JSTL.
+    -> To use Function tags in JSP we have to include taglib directive tag as below :-
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/function" prefix="fn" %>
+
+====================================================================================
