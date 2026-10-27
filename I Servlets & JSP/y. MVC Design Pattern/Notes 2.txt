@@ -1,0 +1,6 @@
+=> Steps to add new Tomcat server in eclipse IDE:-
+
+	1. Go to Windows in toolbar.
+	2. Then go to preferences -> then Server.
+	3. Then go to Runtime Environment.
+	4. After that you can add and remove the server.

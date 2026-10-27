@@ -1,0 +1,25 @@
+=> MVC (Model View Controller) :-
+    -> MVC is a design pattern which is used to separate the different layers of an application i.e. we are able to
+    separate the model layer, UI/presentation layer and controller layer.
+
+    -> Architecture of MVC (for simple applications) :-
+
+    -> MVC have 3 components :-
+        1. M (Model) :-
+            = Model is used to manages the application's data (handles the data storage, retrival and manipulation) and business logic.
+            = "POJO (Plain Old Java Object) Classes" acts as model.
+
+        2. V (View) :-
+            = View represent the UI/Presentation layer which is transfered to the client as a response.
+            = There are 2 types of views:-
+                - static view (HTML, CSS etc)
+                - dynamic view (JSP, JSTL etc)
+
+        3. C (Controller) :-
+            = Controller is used to handle the client requests and process user inputs and events.
+            = Controller acts as an intermediary between the model and the view.
+            = "Servlets" acts as controller.
+
+    -> Architecture of MVC (for complex applications) :-
+
+====================================================================================
