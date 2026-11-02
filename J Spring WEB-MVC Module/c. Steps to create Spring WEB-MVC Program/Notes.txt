@@ -1,0 +1,80 @@
+=> Steps to create String WEB-MVC Application 1 (Old Approach) :-
+
+    1. Provide dependencies:
+        >> Include the necessary Spring MVC dependencies in the pom.xml file i.e.
+            = spring-core
+            = spring-context
+            = spring-expression
+            = spring-webmvc
+
+    2. Create index.jsp page:
+        >> Create index.jsp page that contains a hyperlink to trigger the request.
+
+    3. Configure DispatcherServlet in web.xml:
+        >> Define a servlet mapping in web.xml file to map incoming requests to the DispatcherServlet.
+
+    4. Create Spring Configuration XML File:
+        >> Create an XML file (i.e. myds-servlet.xml) and configure the Spring WEB-MVC Application as follows:
+            4.1 Define handler mapping:
+                = Specify a BeanNameUrlHandlerMapping to map URL pattern to the specific controller.
+            4.2 Configure URL with controller:
+                = Map the URL pattern to a specific controller bean.
+            4.3 Configure View Resolver:
+                = Use InternalResourceViewResolver to resolve view names to actual JSP pages.
+
+    5. Create controller:
+        >> Implements the Controller interface to handle the incoming requests and prepare the data for the view.
+
+    6. Create JSP page for response:
+        >> Create JSP page (i.e. hello.jsp) to display the data prepared by the controller.
+
+=================================================================================================================
+
+=> Steps to create String WEB-MVC Application 2 (New Approach) :-
+
+    1. Provide dependencies:
+        >> Include the necessary Spring MVC dependencies in the pom.xml file i.e.
+            = spring-core
+            = spring-context
+            = spring-expression
+            = spring-webmvc
+
+    2. Create index.jsp page:
+        >> Create index.jsp page that contains a hyperlink to trigger the request.
+
+    3. Configure DispatcherServlet in web.xml:
+        >> Define a servlet mapping in web.xml file to map incoming requests to the DispatcherServlet.
+
+    4. Create Spring Configuration XML File:
+        >> Create an XML file (i.e. myds-servlet.xml) and configure the Spring WEB-MVC Application as follows:
+            4.1 Define handler mapping:
+                = Specify a RequestMappingHandlerMapping to map URL pattern to the specific controller.
+            4.2 Configure View Resolver:
+                = Use InternalResourceViewResolver to resolve view names to actual JSP pages.
+
+    5. Create controller:
+        >> Create a controller to handle incoming requests and prepare data for the view with following steps:
+            5.1 Annotate the class with @Controller
+            5.2 Define handler methods annotated with @RequestMapping to handle the specific URL pattern
+            5.3 The handler method can return ModelAndView object to specify the view name and data to be passed to the view.
+
+    6. Create JSP page for response:
+        >> Create JSP page (i.e. hello.jsp) to display the data prepared by the controller.
+
+==========================================================================================================================
+
+=> Difference between Old and New Approach :-
+    1. Handler Mapping :-
+        = Old Approach : BeanNameUrlHandlerMapping
+        = New Approach : RequestMappingHandlerMapping
+    2. Controller Definition :-
+        = Old Approach : Separate controller beans in Spring Configuration XML File
+        = New Approach : Methods annotated with @RequestMapping
+    3. Flexibility :-
+        = Old Approach : Less Flexible
+        = New Approach : More Flexible
+    4. Ease to use :-
+        = Old Approach : Less easy to use
+        = New Approach : More easy to use
+
+====================================================================================
