@@ -1,0 +1,52 @@
+=> @Controller :-
+    -> It is stereotype annotation that indicates that a class serves the role of controller.
+    -> Syntax :-
+        @Controller
+        class MyController
+        {
+
+        }
+
+    -> It indicates that the annotated class is responsible for handling the HTTP requests.
+    -> This annotation is used to the MVC architectural pattern for building web applications.
+
+====================================================================================
+
+=> Handler Methods :-
+    -> These methods are also known as URL Handler Methods
+    -> These methods are responsible for processing the incoming requests, performing business logic and preparing
+    model data to be rendered by view page.
+    -> In order to map the incoming rendered or URL, handler methods can be annotated with HTTP methods related
+    annotations i.e. @RequestMapping, @PostMapping, @GetMapping etc.
+
+    -> Case studies for handler methods :-
+        1. We can provide any name for handler method.
+        2. We can have any return type for handler method such as String (representing a view name) or ModelAndView (a container for model data and view name) etc.
+        3. We can use non-primitive data type as a parameter for handler methods. However, primitive data types can be
+        also used but they are typically used for simple cases like receiving query parameters.
+
+    -> NOTE : From above points it is clear that the handler method is very flexible and thus this approach is mostly used.
+
+====================================================================================
+
+=> HTTP Methods Related Annotations :-
+    -> Some annotations related to HTTP Methods are :-
+        1. @RequestMapping
+            = This is a versatile annotation that can be used for handling various HTTP methods i.e. GET, POST etc.
+            = It can be applied at the method level or class level.
+            = Syntax :-
+                >> @RequestMapping("/url")
+                >> @RequestMapping(value = {"/url1", "/url2", "/url3"})
+                >> @RequestMapping(value = "/url", method = RequestMethod.POST) <<=>> @PostMapping("/url")
+                >> @RequestMapping(value = "/url", method = {RequestMethod.POST, RequestMethod.GET})
+
+        2. @GetMapping
+            = It is used for handling HTTP GET requests.
+            = It's a specialized form of @RequestMapping for GET method.
+
+        3. @PostMapping
+            = It is used for handling HTTP POST requests.
+            = It's a specialized form of @RequestMapping for POST method.
+    etc
+
+====================================================================================
