@@ -1,0 +1,29 @@
+=> HttpSession :-
+    -> HttpSession is a server-side mechanism in Java Servlets and JSP that allows web applicaitons to store and
+    retrieve user-specific information across multiple requests.
+    -> It enables session management, aiding in maintaining state and user data during user's visit to website.
+
+====================================================================================
+
+=> @SessionAttributes :-
+    -> It is used to store the attributes in the session for specific handler conversation.
+    -> A conversational session is a sequence of requests that are related to each other. For example, a shopping cart
+    conversation might consists of adding items to cart, viewing the cart and checking out.
+    -> Attributes that are stored using @SessionAttributes will be removed from the session once the handler indicates
+    that the conversational session is complete.
+
+    -> This annotation is used to manage session attributes, simplifying the process of injecting, storing and
+    accessing data within controller methods.
+
+    -> This annotation is mostly used at "class level".
+
+====================================================================================
+
+=> Difference between HttpSession and @SessionAttributes :-
+    1. HttpSession scope is for entire session.
+       @SessionAttributes scope is till handler's conversational session.
+
+    2. HttpSession will store the data for longer period of time.
+       @SessionAttributes will store the data for temporary purpose.
+
+====================================================================================
