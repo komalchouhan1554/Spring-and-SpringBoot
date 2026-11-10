@@ -1,0 +1,33 @@
+=> Spring Form Tag Library :-
+    -> It is a collection of JSP tags that simplify the process of creating HTML forms with Spring MVC.
+
+    -> Why we should use Spring Form Tag Library :-
+        1. Data Binding Support:
+            = The form tags help with data binding between form fields and Java Objects. This means that values entered
+            into the form fields can be automatically bound to corresponding properties of Java Object.
+        2. Validation Support:
+            = The form tag library integrates with the Spring Validation Framework or others allowing us to perform server-side validations easily.
+        3. Internationalization (i18n):
+            = The form tag library supports internationalization by providing tags that allow us to display messages in
+            different langauges based on the user locale.
+        4. Improved Code Reability:
+            = The tags make our code more readable and easier to maintain.
+        5. Reduce Development Time:
+            = The tags help us to develop web applications more quickly and easily.
+
+        -> NOTE :
+            = The Spring Form Tag Library is a powerful tool that can help us to develop web applications more quickly and
+            easily. It is a standard part of the Spring MVC Framework and used by many developers.
+            
+            = To use Spring Form Tag Library we have to add one dependency i.e. spring-security-taglibs.
+
+====================================================================================
+
+=> @ModelAttribute :-
+    -> It is an annotation that is used to bind a method parameters or return value to a model attribute, facilitating data preparation for view or form handling.
+
+    -> How to use @ModelAttribute:-
+        1. Parameter-Level Annotation
+        2. Method-Level Annotation
+
+====================================================================================
