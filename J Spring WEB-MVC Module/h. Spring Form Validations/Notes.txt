@@ -1,0 +1,60 @@
+=> Validations in Spring :-
+    -> Validations are the restrictions provided to the client while filling the form so that the data entered by the client is valid.
+
+    -> There are 2 types of validations :-
+        1. Client-Side Validations
+            = Technologies used for Client-Side Validations are JavaScript, VB Script etc.
+        2. Server-Side Validations
+            = Technologies used for Server-Side Validations are Servlets, JSP, Spring, Webservices etc.
+
+    -> We can achieve validations by multiple ways but below are important ways :-
+        1. Using "Validator" interface
+        2. Using JSR-303 Bean Validation
+        3. Using "@Valid" annotation
+            etc
+
+====================================================================================
+
+=> JSR-303 Bean Validation :-
+    -> It is the formal specifications that defines the standard annotations for validating Java Beans.
+
+    -> Annotations in JSR-303 Bean Validation are :-
+        = Basic Annotations : @NotNull, @Null, @NotEmpty, @NotBlank, @Size, @Min, @Max, @Pattern
+        = Temporal Annotations : @Past, @Future, @Present
+            etc
+
+    -> NOTE :-
+        = "Java Bean Validations API" implements the JSR-303 Bean Validation Annotations.
+        = "Hibernate Validator" extends Java Bean Validations API with additional annotations for hibernate entities and ORM scenarios.
+
+	= We need to add dependency: hibernate validator maven dependency (Hibernate Validator Engine Relocation Artifact)
+
+--------------------------------------------------------------------------------------
+
+=> @Valid Annotation :-
+    -> It is a standard annotation which is used to indicate that a method parameter or object field requires validation.
+    -> It is placed directly before the parameter or object to be validated. It can also be applied for method parameter of type Object or any class that supports bean validation.
+    -> Syntax :-
+        public void anyMethod(@Valid SomeClass/Object param)
+        {
+            //implementation
+        }
+
+    -> @Valid can be integrated with the JSR-303 Bean Validation API for comprehensive and standardized validation in Spring Applications.
+
+====================================================================================
+
+=> JCP (Java Community Process) :-
+    -> It is simply a process which allows interested parties (organisation or individual) to develop standard
+    technical specifications for java technology.
+    -> It was established in 1998.
+    -> The JCP is a membership-based community and anyone can join by filling out an application form on Oracle JCP
+    website. JCP members have the right to propose JSR's, lead JSR's, vote for JSR's, participate in JCP discussion etc.
+
+=> JSR (Java Specification Request) :-
+    -> It is a formal, open standard document proposal that is submmited to the JCP by an organization or individual
+    -> JSR contains proposed changes, additions or improvements to the Java Technology Specifications.
+
+    -> Some JSR's for Spring are JSR-303 (Bean Validation), JSR-349 (Context and Dependency Injection), JSR-380 (Expression Langauge) etc.
+
+====================================================================================
