@@ -1,0 +1,34 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<servlet>
+		<servlet-name>myds</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>myds</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!--  
+	<error-page>
+		<exception-type>java.lang.ArithmeticException</exception-type>
+		<location>/errorPage</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/errorPage</location>
+	</error-page>
+	-->
+	
+	
+	<!--  It will handle both exception -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/errorPage</location>
+	</error-page>
+</web-app>
