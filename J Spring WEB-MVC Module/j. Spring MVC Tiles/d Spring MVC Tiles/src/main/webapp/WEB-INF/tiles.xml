@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+
+  <definition name="template1_def" template="/WEB_INF/views/template-one.jsp">
+    <put-attribute name="header1" value="/WEB_INF/views/header.jsp" />
+    <put-attribute name="menubar1" value="/WEB_INF/views/menubar.jsp" />
+    <put-attribute name="body1" value="" />
+    <put-attribute name="footer1" value="/WEB_INF/views/footer.jsp" />
+  </definition>
+  
+   <definition name="template2_def" template="/WEB_INF/views/template-two.jsp">
+    <put-attribute name="header1" value="/WEB_INF/views/header.jsp" />
+    <put-attribute name="menubar1" value="/WEB_INF/views/menubar.jsp" />
+    <put-attribute name="body1" value="" />
+    <put-attribute name="footer1" value="/WEB_INF/views/footer.jsp" />
+  </definition>
+  
+  <definition name="home_def" extends="template1_def">
+  		<put-attribute name="body1" value="/WEB_INF/views/home.jsp" />
+  </definition>
+
+  <definition name="about_def" extends="template2_def">
+  		<put-attribute name="body1" value="/WEB_INF/views/about-us.jsp" />
+  </definition>
+  
+    <definition name="contact_def" extends="template2_def">
+  		<put-attribute name="body1" value="/WEB_INF/views/contact-us.jsp" />
+  </definition>
+  
+</tiles-definitions>
