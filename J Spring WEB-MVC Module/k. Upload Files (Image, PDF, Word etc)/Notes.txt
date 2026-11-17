@@ -1,0 +1,18 @@
+=> Upload Files (images, pdf, word, xml etc) in Spring WEB Module :-
+
+    -> Steps to upload file :-
+        1. Create form to upload file.
+            = To select file we will use <input type="file">
+            = We have to provide enctype="multipart/form-data" in order to upload any file
+        2. Provide dependency i.e. commons-fileupload.
+        3. Get the file name and file (in bytes) and write the file in the folder (in server).
+        4. Configure CommonsMultipartResolver class in spring configuration file.
+
+====================================================================================
+
+=> What is enctype ?
+
+    -> It specifies how form-data should be encoded before sending it to the server.
+    -> It can be used only with post method, not with get method.
+
+====================================================================================
