@@ -1,0 +1,17 @@
+=> Download File (images, pdf, word, xml etc) in Spring WEB Module :-
+
+    -> Steps to download file :-
+        1. Create form to upload file.
+            = To select file we will use <input type="file">
+            = We have to provide enctype="multipart/form-data" in order to upload any file.
+
+        2. Provide dependency i.e. commons-fileupload.
+
+        3. Set some data in response object :-
+            = response.setContentType("application/octet-stream");
+            = response.setHeader("content-disposition", "attachment;filename=\""+file_name+"\"");
+            = response.setContentLength((int)file.length());
+            
+        4. Copy the file from InputStream to OutputStream.
+
+====================================================================================
