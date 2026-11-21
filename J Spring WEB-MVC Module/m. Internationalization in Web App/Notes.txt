@@ -1,0 +1,36 @@
+=> Internationalization (I18N) :-
+    -> Internationalization means designing and creating the application (web or software) in such a way that makes them easy to adapt for the people of different countries or cultures.
+    -> It's like making the foundation that can later be customized to fit for the preferences and languages of different countries.
+
+====================================================================================
+
+=> How our application works :-
+    1. The "LocaleChangeInterceptor" intercepts the requests that include a parameter named "language" to change the locale.
+    2. The "HandlerMapping" determines the appropriate handler method based on the request.
+    3. The "ViewResolver" will resolves the name to an actual JSP file path based on the configured prefix and suffix.
+    4. In this process other beans are utilized :-
+        -> "MessageSource" helps to resolve internationalized messages.
+        -> "LocaleResolver" helps to determine the locale to be used.
+
+====================================================================================
+
+=> ResourceBundleMessageSource Bean :-
+    -> It is responsible for resolving messages from resource bundle.
+    -> It's configured to look up messages from "/in/sp/resources/message" location.
+
+=> SessionLocaleResolver Bean :-
+    -> It is used to resolve the user locale by checking the session.
+    -> It's set with the default locale value i.e. "en" (English).
+
+=> LocaleChangeInterceptor Bean :-
+    -> It intercepts requests to change the locale based on the parameter named "language".
+
+=> RequestMappingHandlerMapping Bean :-
+    -> It maps the incoming requests to appropriate handler method.
+    -> It configures with interceptors (in this case LocaleChangeInterceptor).
+
+=> InternalResourceViewResolver Bean :-
+    -> It will resolves the view names to actual JSP page.
+    -> It configured to look for JSP page in the "/WEB-INF/views" directory.
+
+====================================================================================
