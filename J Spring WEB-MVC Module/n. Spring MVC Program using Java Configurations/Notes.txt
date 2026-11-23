@@ -1,0 +1,40 @@
+=> Spring Web App using Java Configuration :-
+    -> Till now we have used xml file for spring configuration, but in modern applications we mostly use java
+    configurations. So we can remove xml based spring configuration file (even web.xml file).
+
+====================================================================================
+
+=> @Configuration :-
+    -> It is used to declare that the class provides configuration information and bean definations for the application context.
+    -> When it is applied with class, it indicates that the class contains one or more @Bean methods, which defines the beans that make up the application context.
+    -> @Configuration classes can be used to replace XML-based configuration.
+
+=> AnnotationConfigWebApplicationContext :-
+    -> It is a class that is used in web applications where configuration is done through annotated classes, such as marked with @Configuration.
+
+=> WebMvcConfigurer :-
+    -> It is an interface that provides a way to customize and extend the default configuration of the Spring WEB-MVC framework.
+    -> It allows us to register additional components, view resolvers, interceptors etc.
+
+=> @EnableWebMvc :-
+    -> It is used to enable the default Spring MVC configurations provided by WebMvcConfigurationSupport class.
+    -> It enables a set of default configurations such as essential beans like HandlerMapping, HandlerAdaptor,
+    HandlerExceptionResolver etc. It also registers some default view resolvers, interceptors etc.
+
+====================================================================================
+
+=> WebApplicationInitializer :-
+    -> It is an interface which is used to configure context programtically, replacing traditional web.xml.
+    -> It initializes Spring MVC, sets up DispatcherServlet and defines application context for Servlet 3.0+ containers.
+
+=> ServletRegistration.Dynamic :-
+    -> It configures the servlet dynamically.
+    -> In this given example, it registers the "dispatcher" servlet with the specified mapping "/" and controls its initialization.
+
+--------------------------------------------------------------------------------------
+
+=> AbstractAnnotationConfigDispatcherServletInitializer :-
+    -> It is an abstract class that simplifies web application configuration.
+    -> It replaces web.xml by enabling configuration through java classes particularly suited for annotation-based configurations in Spring MVC applications.
+
+====================================================================================
